@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Tong CHEN (陈通)"
 title_separator          : "-"
 name                     : &name "Tong CHEN (陈通)"
-description              : &description "Postdoc researcher at University of Copenhagen."
+description              : &description "Postdoc researcher"
 url                      : https://TongCHEN779.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "TongCHEN779/TongCHEN779.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Tong CHEN"
   avatar           : "tchen.jpg"
-  bio              : "Postdoc researcher at Machine Learning Section, University of Copenhagen."
+  bio              : "Postdoc researcher"
   location         : "Copenhagen"
   employer         :
   pubmed           : 
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/TongCHEN779"
+  github           : "TongCHEN779"
   google_plus      :
   keybase          :
   instagram        :
