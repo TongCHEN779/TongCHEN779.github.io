@@ -1,11 +1,15 @@
 ---
 title: "Semialgebraic Optimization for Lipschitz Constants of ReLU Networks"
 collection: publications
-permalink: /publication/2020-12-SemiLip
+permalink: /publications/2020-12-SemiLip
 excerpt: 
 date: 2020-12
 venue: 'NeurIPS 2020'
-paperurl: 'https://proceedings.neurips.cc/paper/2020/file/dea9ddb25cbf2352cf4dec30222a02a5-Paper.pdf'
-citation: 'Tong Chen, Jean-Bernard Lasserre, Victor Magron, Edouard Pauwels. (2020). &quot;Semialgebraic Optimization for Lipschitz Constants of ReLU Networks.&quot; <i>NeurIPS 2020</i>. 1(1).'
+paperurl: 'http://academicpages.github.io/files/paper1.pdf'
+citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
-[Link](https://tongchen779.github.io/files/paper1), [Code](https://github.com/TongCHEN779/CertDNN).
+This paper is about the number 1. The number 2 is left for future work.
+
+[Download paper here](http://academicpages.github.io/files/paper1.pdf)
+
+Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
