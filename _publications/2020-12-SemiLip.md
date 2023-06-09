@@ -3,7 +3,7 @@ title: "Semialgebraic Optimization for Lipschitz Constants of ReLU Networks"
 collection: publications
 permalink: /publications/2020-12-SemiLip
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2020-12
+date: 2009-10-01
 venue: 'Journal 1'
 ---
 
