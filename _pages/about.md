@@ -28,8 +28,10 @@ Research Interests
 * Safety and reliability of neural networks, e.g., robustness verification, robust training.
 * Mathematical foundation of deep learning.
 
-Research Projects
+Ongoing Projects
 ======
-* 
-*
-*
+* Fist-Order SDP solver for Higher-Order Moment-SOS Relaxation with Ball Constraints.
+* Exactness and Tightness of SDP Relaxation of Neural Network Verification Problem.
+* Understanding the Paradox of Robustness Verification and Training.
+* (Benchmark for) Polynomial Architecture Search (PAS).
+* Data Condensation Combined with Neural Architecture Search.
