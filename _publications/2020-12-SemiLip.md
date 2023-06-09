@@ -7,8 +7,8 @@ date: 2009-10-01
 venue: 'Journal 1'
 ---
 
-This paper is the first application of Lasserre's moment-SOS hierarchy (exploiting sparsity) to deep learning application
+This paper is the first application of Lasserre's moment-SOS hierarchy (exploiting sparsity) to deep learning application.
 
-Bibtex
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
-Code
+[BibTex](https://tongchen779.github.io/files/2020-12-SemiLip-Bibtex.bib)
+[PDF](https://proceedings.neurips.cc/paper_files/paper/2020/file/dea9ddb25cbf2352cf4dec30222a02a5-Paper.pdf)
+[code](https://github.com/TongCHEN779/CertDNN)
