@@ -1,7 +1,7 @@
 ---
 title: "Semialgebraic Optimization for Lipschitz Constants of ReLU Networks"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
+permalink: /publications/2020-12-SemiLip
 excerpt: 'This paper is the fist application of Lasserre's moment-SOS hierarchy to deep learning applications.'
 date: 2020-12
 venue: 'NeurIPS 2020'
