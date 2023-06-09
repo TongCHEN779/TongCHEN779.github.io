@@ -26,10 +26,6 @@
       </div>
     {% endif %}
 
-    <!--    <a href="{{ base_path }}{{ post.url }}">{{ title }}</a><br> -->
-        {{post.authbefore}} <b>Raghavendra Selvan</b>{{post.authafter}}. <i>{{title}}.</i> <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.
-    (<a href=" {{ post.paperurl }} ">link</a>)  (<a href=" {{ post.pdf }} ">pdf</a>) <br>
-    <!--    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: <p> | remove: </p>}}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p> -->
   
   </article>
 </div>
