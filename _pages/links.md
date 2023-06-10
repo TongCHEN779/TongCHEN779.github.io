@@ -33,5 +33,5 @@ Robustness Verification Software:
 
 Workshop on Verification:
 ======
-* [WFVML](https://www.ml-verification.com/): Workshop on Formal Verification Machine Learning
-* [VNN-COMP](https://sites.google.com/view/vnn19/home): International Verification of Neural Networks COMPetition
+* [WFVML](https://www.ml-verification.com/): **W**orkshop on **F**ormal **V**erification **M**achine **L**earning.
+* [VNN-COMP](https://sites.google.com/view/vnn19/home): International **V**erification of **N**eural **N**etworks **COMP**etition.
