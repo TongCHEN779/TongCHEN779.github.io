@@ -15,6 +15,38 @@ Journal Articles
 ---
 <ol>
 {% for post in site.publications reversed %}
-  <li> {% include archive-single.html %}
+	{% if post.pubtype == 'journal' %}
+  		<li> {% include archive-single.html %}
+	{% endif %}
+{% endfor %}
+<ol>
+
+Peer-Reviewed Conference Papers
+---
+<ol>
+{% for post in site.publications reversed %}
+	{% if post.pubtype == 'conference' %}
+  		<li> {% include archive-single.html %}
+	{% endif %}
+{% endfor %}
+<ol>
+
+Preprints / Under Review
+---
+<ol>
+{% for post in site.publications reversed %}
+	{% if post.pubtype == 'preprint' %}
+  		<li> {% include archive-single.html %}
+	{% endif %}
+{% endfor %}
+<ol>
+
+Theses
+---
+<ol>
+{% for post in site.publications reversed %}
+	{% if post.pubtype == 'thesis' %}
+  		<li> {% include archive-single.html %}
+	{% endif %}
 {% endfor %}
 <ol>

@@ -4,6 +4,7 @@ collection: publications
 permalink: /publications/2020-12-SemiLip
 date: 2020-12-01
 venue: 'Advances in Neural Information Processing Systems (NeurIPS)'
+pubtype: conference
 ---
 
 This paper is the first application of Lasserre's moment-SOS hierarchy (exploiting sparsity) to deep learning application.
