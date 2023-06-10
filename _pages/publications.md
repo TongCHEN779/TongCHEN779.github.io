@@ -19,7 +19,7 @@ Journal Articles
   		<li> {% include archive-single.html %}
 	{% endif %}
 {% endfor %}
-</ol>
+<\ol>
 
 Peer-Reviewed Conference Papers
 ---
@@ -29,7 +29,7 @@ Peer-Reviewed Conference Papers
   		<li> {% include archive-single.html %}
 	{% endif %}
 {% endfor %}
-</ol>
+<\ol>
 
 Preprints / Under Review
 ---
@@ -39,7 +39,7 @@ Preprints / Under Review
   		<li> {% include archive-single.html %}
 	{% endif %}
 {% endfor %}
-</ol>
+<\ol>
 
 Theses
 ---
@@ -49,4 +49,4 @@ Theses
   		<li> {% include archive-single.html %}
 	{% endif %}
 {% endfor %}
-</ol>
+<\ol>
