@@ -3,7 +3,7 @@ title: "Polynomial Optimization Methods for Robustness Certification Problems in
 collection: publications
 permalink: /publications/2019-09-01-Polynomial
 date: 2019-09-01
-venue: 
+venue: 'Université Paris Sud'
 pubtype: thesis
 ---
 
