@@ -1,0 +1,19 @@
+TY  - JOUR
+AU  - Chen, Tong
+AU  - Lasserre, Jean-Bernard
+AU  - Magron, Victor
+AU  - Pauwels, Edouard
+PY  - 2022
+DA  - 2022/01/01
+TI  - A sublevel moment-SOS hierarchy for polynomial optimization
+JO  - Computational Optimization and Applications
+SP  - 31
+EP  - 66
+VL  - 81
+IS  - 1
+AB  - We introduce a sublevel Moment-SOS hierarchy where each SDP relaxation can be viewed as an intermediate (or interpolation) between the d-th and $$(d+1)$$-th order SDP relaxations of the Moment-SOS hierarchy (dense or sparse version). With the flexible choice of determining the size (level) and number (depth) of subsets in the SDP relaxation, one is able to obtain different improvements compared to the d-th order relaxation, based on the machine memory capacity. In particular, we provide numerical experiments for $$d=1$$and various types of problems both in combinatorial optimization (Max-Cut, Mixed Integer Programming) and deep learning (robustness certification, Lipschitz constant of neural networks), where the standard Lasserre’s relaxation (or its sparse variant) is computationally intractable. In our numerical results, the lower bounds from the sublevel relaxations improve the bound from Shor’s relaxation (first order Lasserre’s relaxation) and are significantly closer to the optimal value or to the best-known lower/upper bounds.
+SN  - 1573-2894
+UR  - https://doi.org/10.1007/s10589-021-00325-z
+DO  - 10.1007/s10589-021-00325-z
+ID  - Chen2022
+ER  - 
