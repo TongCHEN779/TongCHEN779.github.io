@@ -11,7 +11,10 @@ author_profile: true
 
 {% include base_path %}
 
-
+Journal Articles
+---
+<ol>
 {% for post in site.publications reversed %}
-  {% include archive-single.html %}
+  <li> {% include archive-single.html %}
 {% endfor %}
+<ol>
