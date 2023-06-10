@@ -19,7 +19,7 @@ From optimization aspect, he has developed a second-order SDP relaxation method 
 From machine learning aspect, he is concerned about the robustness and safety of intelligent systems. In particular, robustness verification of neural networks is a tough problem both theoretically and practically. There always exists a trade-off between efficiency and accuracy for verification algorithms. I have been working for a long time to design efficient polynomial optimization-based algorithms to verify robustness of neural networks, see [Chen et al 2020](https://proceedings.neurips.cc/paper/2020/file/dea9ddb25cbf2352cf4dec30222a02a5-Paper.pdf), [Chen et al 2021](https://proceedings.neurips.cc/paper/2021/file/e3b21256183cf7c2c7a66be163579d37-Paper.pdf). However, polynomial-based approaches can be only applied to small-scaled networks for the moment. The potential and future of polynomial optimization in machine learning is still unknown.
 
 Research Interests
-======
+---
 * Efficient and sustainable ML, e.g., model compression, quantum computing.
 * Polynomial optimization algorithms with/without exploring sparsity structures and their applications.
 * Semidefinite programming (SDP) and first-order algorithms for SDP.
@@ -29,7 +29,7 @@ Research Interests
 * Mathematical foundation of deep learning.
 
 Ongoing Projects
-======
+---
 * Fist-Order SDP solver for Higher-Order Moment-SOS Relaxation with Ball Constraints.
 * Exactness and Tightness of SDP Relaxation of Neural Network Verification Problem.
 * Understanding the Paradox of Robustness Verification and Training.
