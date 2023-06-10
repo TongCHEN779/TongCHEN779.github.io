@@ -1,12 +1,13 @@
 ---
-permalink: /links
+layout: archive
 title: "Some Useful Links"
+permalink: /links
 author_profile: true
 ---
 
 Seminars
 ======
-* [POEMA]().
+* [POEMA](http://poema-network.eu/index.php): **P**olynomial **O**ptimization, **E**fficiency through **M**oments and **A**lgebra.
 * [OWOS]().
 * [SPOT]().
 * [BrainPOP]
