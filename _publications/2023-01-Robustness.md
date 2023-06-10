@@ -7,5 +7,5 @@ venue: 'Université Toulouse 3 Paul Sabatier'
 pubtype: thesis
 ---
 
-This paper is about the number 3. The number 4 is left for future work.
+This is the PhD thesis of Tong Chen, summarizing the polynomial optimization frameworks for various deep learning task.
 [[link](http://thesesups.ups-tlse.fr/5493/1/2022TOU30190.pdf)]

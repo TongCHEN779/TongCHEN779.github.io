@@ -7,7 +7,7 @@ venue: 'Advances in Neural Information Processing Systems (NeurIPS)'
 pubtype: conference
 ---
 
-This paper is about the number 2. The number 3 is left for future work.
+This paper is about some general models for verifying robustness of monotone deep equilibrium models (monDEQ).
 [[cite](https://tongchen779.github.io/ref/2021-12-SemiMonDEQ.bib),
 [link](https://proceedings.neurips.cc/paper_files/paper/2021/file/e3b21256183cf7c2c7a66be163579d37-Paper.pdf),
 [code](https://github.com/TongCHEN779/CertMON)]
