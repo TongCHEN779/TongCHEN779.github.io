@@ -16,37 +16,37 @@ Journal Articles
 <ol>
 {% for post in site.publications reversed %}
 	{% if post.pubtype == 'journal' %}
-  		<li> {% include archive-single.html %}
+  		<li> {% include archive-single.html %} </li>
 	{% endif %}
 {% endfor %}
-<\ol>
+</ol>
 
 Peer-Reviewed Conference Papers
 ---
 <ol>
 {% for post in site.publications reversed %}
 	{% if post.pubtype == 'conference' %}
-  		<li> {% include archive-single.html %}
+  		<li> {% include archive-single.html %} </li>
 	{% endif %}
 {% endfor %}
-<\ol>
+</ol>
 
 Preprints / Under Review
 ---
 <ol>
 {% for post in site.publications reversed %}
 	{% if post.pubtype == 'preprint' %}
-  		<li> {% include archive-single.html %}
+  		<li> {% include archive-single.html %} </li>
 	{% endif %}
 {% endfor %}
-<\ol>
+</ol>
 
 Theses
 ---
 <ol>
 {% for post in site.publications reversed %}
 	{% if post.pubtype == 'thesis' %}
-  		<li> {% include archive-single.html %}
+  		<li> {% include archive-single.html %} </li>
 	{% endif %}
 {% endfor %}
-<\ol>
+</ol>
