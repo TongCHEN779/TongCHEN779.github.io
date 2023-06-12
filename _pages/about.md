@@ -35,3 +35,4 @@ Ongoing Projects
 * Understanding the Paradox of Robustness Verification and Training.
 * (Benchmark for) Polynomial Architecture Search (PAS).
 * Data Condensation Combined with Neural Architecture Search.
+* Robustness-Aware Neural Architecture Search.
