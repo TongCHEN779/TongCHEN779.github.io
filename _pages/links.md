@@ -31,13 +31,14 @@ Polynomial Optimization Software:
 
 Robustness Verification Software:
 ---
-* [Foolbox](https://github.com/bethgelab/foolbox): fast adversarial attacks to benchmark the robustness of machine learning models by PyTorch, TensorFlow, and JAX.
-* [jax_verify](https://github.com/deepmind/jax_verify): neural network verification in JAX.
+* [Foolbox](https://github.com/bethgelab/foolbox): Fast adversarial attacks to benchmark the robustness of machine learning models by PyTorch, TensorFlow, and JAX.
+* [jax_verify](https://github.com/deepmind/jax_verify): Neural network verification in JAX.
 * [ERAN](https://github.com/eth-sri/eran): **E**TH **R**obustness **A**nalyzer for **N**eural networks.
-* [alpha, beta-CROWN](https://github.com/huanzhang12/alpha-beta-CROWN): a fast and scalable neural network verifier with efficient bound propagation.
-* [SoK](https://sokcertifiedrobustness.github.io/): certified robustness for deep neural networks.
-* [RobustML](https://www.robust-ml.org/): a community-run hub for learning about robust machine learning.
-* [convex_adversarial](https://github.com/locuslab/convex_adversarial): training provably robust neural networks by optimizing convex outer bounds on the adversarial polytope.
+* [alpha, beta-CROWN](https://github.com/huanzhang12/alpha-beta-CROWN): A fast and scalable neural network verifier with efficient bound propagation.
+* [SoK](https://sokcertifiedrobustness.github.io/): Certified robustness for deep neural networks.
+* [RobustBench](https://robustbench.github.io/): A standardized benchmark for adversarial robustness using [AutoAttack](https://github.com/fra31/auto-attack) (which is the starting point of RobustBench and is no longer maintained.
+* [RobustML](https://www.robust-ml.org/): A community-run hub for learning about robust machine learning.
+* [convex_adversarial](https://github.com/locuslab/convex_adversarial): Training provably robust neural networks by optimizing convex outer bounds on the adversarial polytope.
 
 Workshop on Verification:
 ---
