@@ -1,4 +1,9 @@
 ---
+layout: archive
+title: "Links"
+permalink: /links/
+author_profile: true
+---
 
 Efficient and Sustainable Machine Learning:
 ---
