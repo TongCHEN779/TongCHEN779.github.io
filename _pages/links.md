@@ -9,6 +9,7 @@ Efficient and Sustainable Machine Learning:
 ---
 * Google Research, 2022 & beyond: [Algorithms for efficient deep learning](https://ai.googleblog.com/2023/02/google-research-2022-beyond-algorithms.html).
 * [MIT HAN Lab](https://hanlab.mit.edu/).
+* [DC-Bench](https://dc-bench.github.io/): A standardized benchmark for dataset condensation.
 * [AutoML](https://www.automl.org/).
 * [Numenta](https://www.numenta.com/).
 * Nature: [In AI, is bigger always better?](https://www.nature.com/articles/d41586-023-00641-w).
