@@ -41,7 +41,10 @@ Robustness Verification Software:
 * [RobustML](https://www.robust-ml.org/): A community-run hub for learning about robust machine learning.
 * [convex_adversarial](https://github.com/locuslab/convex_adversarial): Training provably robust neural networks by optimizing convex outer bounds on the adversarial polytope.
 
-Workshop on Verification:
+Workshops and Tutorials on Verification:
 ---
 * [WFVML](https://www.ml-verification.com/): **W**orkshop on **F**ormal **V**erification **M**achine **L**earning.
 * [VNN-COMP](https://sites.google.com/view/vnn19/home): International **V**erification of **N**eural **N**etworks **COMP**etition.
+* [Adversarial Robustness - Theory and Practice](https://adversarial-ml-tutorial.org/) by Zico Kolter and Aleksander Madry.
+* [Reliable and Interpretable Artificial Intelligence](https://www.sri.inf.ethz.ch/teaching/riai2020) by Martin Vechev.
+* [Trustworthy Machine Learning](https://trustworthy-machine-learning.github.io/) by Reza Shokri and Nicolas Papernot.
