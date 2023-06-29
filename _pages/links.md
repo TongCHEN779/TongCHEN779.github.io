@@ -40,6 +40,7 @@ Robustness Verification Software:
 * [RobustBench](https://robustbench.github.io/): A standardized benchmark for adversarial robustness using [AutoAttack](https://github.com/fra31/auto-attack) (which is the starting point of RobustBench and is no longer maintained.
 * [RobustML](https://www.robust-ml.org/): A community-run hub for learning about robust machine learning.
 * [convex_adversarial](https://github.com/locuslab/convex_adversarial): Training provably robust neural networks by optimizing convex outer bounds on the adversarial polytope.
+* [RobustNeuralNetworks.jl](https://github.com/acfr/RobustNeuralNetworks.jl): A Julia package for robust neural networks built from the [Recurrent Equilibrium Network (REN)](https://arxiv.org/abs/2104.05942) and [Lipschitz-Bounded Deep Network (LBDN)](https://arxiv.org/abs/2301.11526) model classes.
 
 Workshops and Tutorials on Verification:
 ---
