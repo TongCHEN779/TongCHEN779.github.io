@@ -30,9 +30,9 @@ Research Interests
 
 Ongoing Projects
 ---
+* Learning dynamic SOS proof.
+* Core set selection / Dataset condensation via finite covering.
+* Robustness preserved dataset condensation.
 * Fist-Order SDP solver for Higher-Order Moment-SOS Relaxation with Ball Constraints.
 * Exactness and Tightness of SDP Relaxation of Neural Network Verification Problem.
 * Understanding the Paradox of Robustness Verification and Training.
-* (Benchmark for) Polynomial Architecture Search (PAS).
-* Data Condensation Combined with Neural Architecture Search.
-* Robustness-Aware Neural Architecture Search.
