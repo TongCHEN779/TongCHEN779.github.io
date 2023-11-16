@@ -14,8 +14,8 @@ Previously, Tong obtained his PhD's degree at LAAS-CNRS, [POP](https://www.laas.
 
 Research Interests
 ---
-Tong's research interests mainly lie one the following parts:
 * Efficient machine learning with provable guarantee and robustness.
+
 Opposite to the big trend in deep learning, we are trying to investigate how to compress/condense ML model/data both in theory and in practice. In theory, we are investigating how to propose compression method with provable performance guarantee, or how to verify the performance of a compressed model/data with provable guarantee. We are also drawing the community's attention from test accuracy to other metrics, e.g., compression should not only aim for generalization, but also robustness, privacy, fairness, etc. 
 
 In practice, we are trying to do training-free compression. This includes evaluate the generalization property of a model structure without training, or compare the distribution of datasets without training. We are also trying to understand the difference between features learned by a large model and a compressed one, and how to extract useful features and remove useless features.
