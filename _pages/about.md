@@ -22,7 +22,7 @@ In practice, we are trying to do training-free compression. This includes evalua
 
 ### Ongoing projects
 
-- Dataset condensation (for generic purpose, e.g., accuracy, robustness, privacy, fairness, etc.): This includes model-based and model-free methods, optimising in data space and feature space.
+- Dataset condensation: This includes model-based and model-free methods, optimising in data space and feature space, and DC for generic purpose, e.g., accuracy, robustness, privacy, fairness, etc.
 
 - Data-driven model compression: Similar with dataset condensation, we are interested in model-free (data-driven) model compression methods.
 
