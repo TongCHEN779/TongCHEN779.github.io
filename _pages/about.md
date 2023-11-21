@@ -20,8 +20,20 @@ Opposite to the big trend in deep learning, we are trying to investigate how to 
 
 In practice, we are trying to do training-free compression. This includes evaluate the generalization property of a model structure without training, or compare the distribution of datasets without training. We are also trying to understand the difference between features learned by a large model and a compressed one, and how to extract useful features and remove useless features.
 
+### Ongoing projects
+
+- Dataset condensation (for generic purpose, e.g., accuracy, robustness, privacy, fairness, etc.): This includes model-based and model-free methods, optimising in data space and feature space.
+
+- Data-driven model compression: Similar with dataset condensation, we are interested in model-free (data-driven) model compression methods.
+
 ## 2. Polynomial optimisation for and with machine learning
 
 We have developed a second-order SDP relaxation method based on Lasserre's moment-SOS hierarchy, called [Sublevel Hierarchy](https://link.springer.com/article/10.1007/s10589-021-00325-z/),  which can be used for various ML tasks including robustness verification of deep neural networks (see [[Chen et al., 2020](https://proceedings.neurips.cc/paper/2020/file/dea9ddb25cbf2352cf4dec30222a02a5-Paper.pdf)], [[Chen et al., 2021](https://proceedings.neurips.cc/paper/2021/file/e3b21256183cf7c2c7a66be163579d37-Paper.pdf)]). He is interested in exploring the sparse structure, together with designing efficient first-/second-order optimization algorithms for large-scale problems arising from ML. For example, the fast first-order SDP solver for robustness verification of DNNs by [[Dathathri et al., 2020](https://proceedings.neurips.cc/paper/2020/file/397d6b4c83c91021fe928a8c4220386b-Paper.pdf)].
 
 Another promising question is how to use ML model to learn the sparsity structures in moment-SOS relaxation. The only related work is called "dynamic polynomial proof" by [[Fawzi et al., 2019](https://arxiv.org/abs/1906.01681)], which use RL algorithm to find sparse Krivine-Stengle P-satz representations. It's natural to investigate how to extend this idea to SOS proof.
+
+### Ongoing projects
+
+- Learning dynamic SOS proof using RL method: Krivine-Stengle and Putinar's positivstellensatz (P-satz) are common tools to certify positivity of a polynomial. However, existing static hierarchies suffer from numerical intractability. Using RL method such as DQN to dynamically search the optimal hierarchies is a promising and challenging open problem for SOS proof.
+
+- Implementation of higher-order moment-SOS problems in ML framework: Moment problems have been implemented a lot in Julia/Matlab, but not in Python. This prevents researchers from studying ML problems using moment-SOS tools efficiently. Successful applications include JAX implementation of first-order SDP relaxation, but generalisation is needed.
