@@ -10,30 +10,30 @@ redirect_from:
 
 Tong Chen is a postdoc researcher with [Raghavendra Selvan](https://raghavian.github.io/) at [Machine Learning Section](https://di.ku.dk/english/research/machine-learning/), University of Copenhagen. His current research is mainly about efficient and sustainable machine learning, under the [SustainML](https://sustainml.eu/) project. 
 
-Previously, Tong obtained his PhD's degree at LAAS-CNRS, [POP](https://www.laas.fr/public/fr/pop/) team, in Toulouse, France, under supervision of [Jean-Bernard Lasserre](https://homepages.laas.fr/lasserre/drupal/home/), [Victor Magron](https://homepages.laas.fr/vmagron/) and [Edouard Pauwels](https://www.irit.fr/~Edouard.Pauwels/) in December 2022. His PhD thesis is about "[Robustness Verification of Neural Networks using Polynomial Optimization](http://thesesups.ups-tlse.fr/5493/)", here are the [slides](http://tongchen779.github.io/files/PhD_defense.pdf) for the defense. He received a master's degree in September 2019 in Statistics and Machine Learning from Université Paris Saclay in France, and a bachelor's degree in June 2017 in Mathematics from [Wuhan University](http://maths.whu.edu.cn/Englishversion/index.htm) in China. Here is his [CV](http://tongchen779.github.io/files/CV_in_english.pdf).
+Previously, Tong obtained his PhD's degree at LAAS-CNRS, [POP](https://www.laas.fr/public/fr/pop/) team, in Toulouse, France, under supervision of [Jean-Bernard Lasserre](https://homepages.laas.fr/lasserre/drupal/home/), [Victor Magron](https://homepages.laas.fr/vmagron/) and [Edouard Pauwels](https://www.irit.fr/~Edouard.Pauwels/) in December 2022. His PhD thesis is about "[Robustness Verification of Neural Networks using Polynomial Optimization](https://theses.hal.science/tel-04008562/document)", here are the [slides](http://tongchen779.github.io/files/PhD_defense.pdf) for the defense. He received a master's degree in September 2019 in Statistics and Machine Learning from Université Paris Saclay in France, and a bachelor's degree in June 2017 in Mathematics from [Wuhan University](http://maths.whu.edu.cn/Englishversion/index.htm) in China. Here is his [CV](http://tongchen779.github.io/files/CV_in_english.pdf).
 
 # Research Interests
 
-## 1. Efficient machine learning with provable guarantee and robustness
+## 1. Efficient Machine Learning
 
-Opposite to the big trend in deep learning, we are trying to investigate how to compress/condense ML model/data both in theory and in practice. In theory, we are investigating how to propose compression method with provable performance guarantee, or how to verify the performance of a compressed model/data with provable guarantee. We are also drawing the community's attention from test accuracy to other metrics, e.g., compression should not only aim for generalization, but also robustness, privacy, fairness, etc. 
-
-In practice, we are trying to do training-free compression. This includes evaluate the generalization property of a model structure without training, or compare the distribution of datasets without training. We are also trying to understand the difference between features learned by a large model and a compressed one, and how to extract useful features and remove useless features.
-
-### Ongoing projects
+Large model and dataset play important roles in mordern deep learning, we, on the other hand, are trying to investigate how to make DL model/dataset smaller while preserving the target downstream performance. In theory, it's essential to show whether (and how) one is able to achieve similar performance with smaller models or less data. In practice, we should also be aware that generalization (which is almost the unique consideration in most cases) might be misleading, and a wider range of factors (such as robustness, privacy, fairness, etc.) should be considered.
 
 - Dataset condensation: This includes model-based and model-free methods, optimising in data space and feature space, and DC for generic purpose, e.g., accuracy, robustness, privacy, fairness, etc.
 
 - Data-driven model compression: Similar with dataset condensation, we are interested in model-free (data-driven) model compression methods.
 
-## 2. Polynomial optimisation for and with machine learning
+## 2. Polynomial Optimization for Machine Learning (POP4ML)
 
-We have developed a second-order SDP relaxation method based on Lasserre's moment-SOS hierarchy, called [Sublevel Hierarchy](https://link.springer.com/article/10.1007/s10589-021-00325-z/),  which can be used for various ML tasks including robustness verification of deep neural networks (see [[Chen et al., 2020](https://proceedings.neurips.cc/paper/2020/file/dea9ddb25cbf2352cf4dec30222a02a5-Paper.pdf)], [[Chen et al., 2021](https://proceedings.neurips.cc/paper/2021/file/e3b21256183cf7c2c7a66be163579d37-Paper.pdf)]). He is interested in exploring the sparse structure, together with designing efficient first-/second-order optimization algorithms for large-scale problems arising from ML. For example, the fast first-order SDP solver for robustness verification of DNNs by [[Dathathri et al., 2020](https://proceedings.neurips.cc/paper/2020/file/397d6b4c83c91021fe928a8c4220386b-Paper.pdf)].
+I have developed an SDP relaxation framework based on Lasserre's moment-SOS hierarchy and its sparse variant, called [Sublevel Hierarchy](https://link.springer.com/article/10.1007/s10589-021-00325-z/),  which can be used for various ML tasks including robustness verification of deep neural networks (see [[Chen et al., 2020](https://proceedings.neurips.cc/paper/2020/file/dea9ddb25cbf2352cf4dec30222a02a5-Paper.pdf)], [[Chen et al., 2021](https://proceedings.neurips.cc/paper/2021/file/e3b21256183cf7c2c7a66be163579d37-Paper.pdf)]). Other potential applications include:
 
-Another promising question is how to use ML model to learn the sparsity structures in moment-SOS relaxation. The only related work is called "dynamic polynomial proof" by [[Fawzi et al., 2019](https://arxiv.org/abs/1906.01681)], which use RL algorithm to find sparse Krivine-Stengle P-satz representations. It's natural to investigate how to extend this idea to SOS proof.
+- Robust classification: Robust classifiers can be formulated by polynomial optimization. However, it's not scalable to large-scale ML problems and is sometimes not numerically stable. It would be a nice alternative of adversarial training once those issues are mitigated.
 
-### Ongoing projects
+- Implementation of higher-order moment-SOS problems in ML framework: Moment problems have been implemented a lot in Julia/Matlab, but not in Python. This prevents researchers from studying ML problems using moment-SOS tools efficiently. Successful applications include JAX implementation of first-order SDP relaxation, but extension is needed.
+
+## 3. Machine Learning for Polynomial Optimization (ML4POP)
+
+Polynomials are GOOD (in theory), BAD (in practice), and UGLY (from theory to practice). My hope is to make them also GOOD in pactice, and beautiful from theory to practice. In order to approach that, one possible way is to automate the acceleration techniques (such as sparsity, low-rank decomposition) of optimization instead of static methods.
 
 - Learning dynamic SOS proof using RL method: Krivine-Stengle and Putinar's positivstellensatz (P-satz) are common tools to certify positivity of a polynomial. However, existing static hierarchies suffer from numerical intractability. Using RL method such as DQN to dynamically search the optimal hierarchies is a promising and challenging open problem for SOS proof.
 
-- Implementation of higher-order moment-SOS problems in ML framework: Moment problems have been implemented a lot in Julia/Matlab, but not in Python. This prevents researchers from studying ML problems using moment-SOS tools efficiently. Successful applications include JAX implementation of first-order SDP relaxation, but generalisation is needed.
+- Low-rank decomposition of PSD matrices: In many first-order algorithms for solving SDPs, we frequently pre-decompose a large PSD matrix to the product of two smaller matrices, which is called the rank. However, the rank is a hyperparamter and is usually tuned empirically starting from 1. The idea is to estimate the rank of a matrix using ML models to improve the tuning efficiency.
