@@ -8,4 +8,20 @@ tags:
   - Machine Learning
 ---
 
-TODO
+Background
+---
+
+Polynomial Optimization (POP) and Semidefinite Programming (SDP)
+---
+
+Non-convex Set Approximation
+---
+
+Robust Classification
+---
+
+Network Pruning
+---
+
+Dataset Condensation
+---
