@@ -1,7 +1,7 @@
 ---
 title: "Semialgebraic representation of monotone deep equilibrium models and applications to certification"
-collection: publications
-permalink: /publications/2021-12-SemiMonDEQ
+collection: blog
+permalink: /blog/2021-12-SemiMonDEQ
 date: 2021-12-01
 venue: 'Advances in Neural Information Processing Systems (NeurIPS)'
 pubtype: conference

@@ -1,7 +1,7 @@
 ---
 title: "Semialgebraic Optimization for Lipschitz Constants of ReLU Networks"
-collection: publications
-permalink: /publications/2020-12-SemiLip
+collection: blog
+permalink: /blog/2020-12-SemiLip
 date: 2020-12-01
 venue: 'Advances in Neural Information Processing Systems (NeurIPS)'
 pubtype: conference
