@@ -5,5 +5,6 @@ permalink: /blog/
 author_profile: true
 ---
 
-```{include} _blogs/understanding_diffusion.md
-```
+{% for post in site.blogs reversed %}
+  {% include archive-single.html %}
+{% endfor %}
