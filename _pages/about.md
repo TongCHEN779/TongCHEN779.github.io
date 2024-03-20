@@ -16,7 +16,7 @@ Previously, Tong obtained his PhD's degree at LAAS-CNRS, [POP](https://www.laas.
 
 ## 1. Efficient Machine Learning
 
-Large model and dataset play important roles in mordern deep learning, we, on the other hand, are trying to investigate how to make DL model/dataset smaller while preserving the target downstream performance. In theory, it's essential to show whether (and how) one is able to achieve similar performance with smaller models or less data. In practice, we should also be aware that generalization (which is almost the unique consideration in most cases) might be misleading, and a wider range of factors (such as robustness, privacy, fairness, etc.) should be considered.
+Large model and dataset play important roles in mordern deep learning. We, on the other hand, are trying to investigate how to make DL model/dataset smaller while preserving the target downstream performance. In theory, it's essential to show whether (and how) one is able to achieve similar performance with smaller models or less data. In practice, we should also be aware that generalization (which is almost the unique consideration in most cases) might be misleading, and a wider range of factors (such as robustness, privacy, fairness, etc.) should be considered.
 
 - Dataset condensation: This includes model-based and model-free methods, optimising in data space and feature space, and DC for generic purpose, e.g., accuracy, robustness, privacy, fairness, etc.
 
