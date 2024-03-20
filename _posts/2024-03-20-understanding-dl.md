@@ -1,11 +1,10 @@
 ---
-title: 'Blog Post number 1'
+title: 'A Comparison of '
 date: 2012-08-14
-permalink: /posts/2012/08/blog-post-1/
+permalink: /posts/2024-03-20-understanding-dl/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - probabilistic
+  - statistic
 ---
 
 This is a sample blog post. Lorem ipsum I can't remember the rest of lorem ipsum and don't have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.
