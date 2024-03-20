@@ -20,7 +20,7 @@ Non-convex Set Approximation
 Robust Classification
 ---
 
-Network Pruning
+ReLU Network Pruning
 ---
 
 Dataset Condensation
