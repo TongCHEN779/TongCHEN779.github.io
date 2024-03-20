@@ -1,19 +1,10 @@
 ---
-title: 'A Comparison of '
-date: 2012-08-14
+title: 'A Comparison of Probabilistic and Statistic View of Deep Learning Models'
+date: 2024-03-20
 permalink: /posts/2024-03-20-understanding-dl/
 tags:
   - probabilistic
   - statistic
 ---
 
-This is a sample blog post. Lorem ipsum I can't remember the rest of lorem ipsum and don't have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.
-
-Headings are cool
-======
-
-You can have many headings
-======
-
-Aren't headings cool?
-------
+TODO
