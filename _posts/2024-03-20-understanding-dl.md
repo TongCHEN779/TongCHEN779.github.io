@@ -32,9 +32,9 @@ $$
 
 Now we have three probabilistic worlds: 
 
-  * Real world: $p(X), p(Z), p(X|z), p(Z|x)$;
+  * Real world: $p(X), p(Z), p(X\|z), p(Z\|x)$;
   * Observed world: $\hat{p} (X)$;
-  * Approximated world: $\theta(Z), \theta(X|z), \phi(X), \phi(Z|x)$.
+  * Approximated world: $\theta(Z), \theta(X\|z), \phi(X), \phi(Z\|x)$.
 
 In the cases where computing the evidence $\log \phi (x)$ is intractable (due to mixture of distributions), we would rather use the marginal 
 
