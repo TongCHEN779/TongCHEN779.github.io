@@ -14,8 +14,6 @@ Background
 ---
 We use lower case $x$ to denote the observed sample, and upper case $X$ to denote the associated unknown variable. We denote by $X, Y, Z$ the observation, latent, and lable, respectively. In most cases, only the variable $X$ can be fully observed, the label $Y$ might be partially observed, and the latent $Z$ is unobservable. 
 
-The true world is never observable, and the approximated world is derived from our prior and posterior knowledge. Therefore, the goal is to let our knowledge as close to the ground true as possible, i.e., minimize the probability discrepancy between $\hat{p}$ and $q$.
-
 Evidence Lower Bound (ELBO)
 ---
 We have an observed variable $X$ and one latent variable $Z$, the joint distribution $p(X, Z)$ can be parameterized by 
@@ -36,7 +34,7 @@ Now we have three probabilistic worlds:
   * Observed world: $\hat{p} (X)$;
   * Approximated world: $\theta(Z), \theta(X\|z), \phi(X), \phi(Z\|x)$.
 
-In the cases where computing the evidence $\log \phi (x)$ is intractable (due to mixture of distributions), we would rather use the marginal 
+The true world is never observable, and the approximated world is derived from our prior and posterior knowledge. Therefore, the goal is to let our knowledge as close to the ground true as possible, i.e., minimize the probability discrepancy between $\hat{p}$ and $\phi$. In the cases where computing the evidence $\log \phi (x)$ is intractable (due to mixture of distributions), we would rather use the marginal 
 
 $$
 \log \int \phi (x, z) \text{d} z = \int \phi (x|z) \phi (z) \text{d} z
@@ -64,15 +62,63 @@ We see that, by maximizing ELBO, we simutaneously minimize the KL-divergence bet
 
 Density Estimation
 ---
+With observation $X$, we minimize the KL-divergence between $\hat{p} (X)$ and $\phi(X)$:
+
+$$\min KL (\hat{p} \|\| \phi) = \max \mathbb{E}_{X \sim \hat{p}} [\log \phi(X)]$$
 
 Classification/Regression
 ---
+With observation $X, Y$, we minimize the KL-divergence between $\hat{p} (Y\|X)$ and $\phi(Y\|X)$:
+
+$$\min KL (\hat{p} \|\| \phi) = \max \mathbb{E}_{(X, Y) \sim \hat{p}} [\log \phi(Y\|X)]$$
 
 Variational Autoencoder (VAE)
 ---
+With observation $X$ associated with latent variable $Z$, we minimize the KL-divergence between $\hat{p} (X)$ and $q(X)$:
+
+$$\begin{align*}
+& \min KL (\hat{p} \|\| \phi) \\
+= & \max \mathbb{E}_{X \sim \hat{p}} [\log \phi(X)] \\
+\ge & \max \mathbb{E}_{X \sim \hat{p}} [ELBO (X)] \\
+= & \max \mathbb{E}_{X \sim \hat{p}} \bigg[\mathbb{E}_{Z \sim \phi (\cdot\|X)} \bigg[\log \frac{p (X, Z)}{\phi (Z\|X)}\bigg]\bigg]
+\end{align*}$$
 
 Markovian Hierarchical VAE (MHVAE)
 ---
+With observation $X$ associated with latent variables $Z_{1:T}$, we minimize the KL-divergence between $\hat{p} (X)$ and $\phi(X)$:
+
+$$\begin{align*}
+& \min KL (\hat{p} \|\| \phi) \\ 
+= & \max \mathbb{E}_{X \sim \hat{p}} [\log \phi(X)] \\
+\ge & \max \mathbb{E}_{X \sim \hat{p}} [ELBO (X)] \\
+= & \max \mathbb{E}_{X \sim \hat{p}} \bigg[\mathbb{E}_{Z_{1:T} \sim \phi (\cdot\|X)} \bigg[\log \frac{p (X, Z_{1:T})}{\phi (Z_{1:T}\|X)}\bigg]\bigg] \\
+= & \max \mathbb{E}_{X \sim \hat{p}} \bigg[\mathbb{E}_{Z_{1:T} \sim \phi (\cdot\|X)} \bigg[\log \frac{\theta (Z_T) \theta (X\|Z_1) \prod_{t = 2}^T \theta (Z_{t-1}\|Z_t)}{\phi (Z_1\|X) \prod_{t = 2}^T \phi (Z_t \| Z_{t-1})}\bigg]\bigg]
+\end{align*}$$
 
 Variational Diffusion Model (VDM)
 ---
+With observation $X_0$ associated with latent variables $X_{1:T}$, we additionally know (pre-define) the forward encoder conditional distribution $p (X_t \| X_{t-1})$. We minimize the KL-divergence between $\hat{p} (X_0)$ and $q(X_0)$:
+
+$$\begin{align*}
+& \min KL (\hat{p} \|\| \phi) \\ 
+= & \max \mathbb{E}_{X_0 \sim \hat{p}} [\log \phi(X_0)] \\
+\ge & \max \mathbb{E}_{X_0 \sim \hat{p}} [ELBO (X_0)] \\
+= & \max \mathbb{E}_{X_0 \sim \hat{p}} \bigg[\mathbb{E}_{X_{1:T} \sim \phi (\cdot\|X_0)} \bigg[\log \frac{p (X_{0:T})}{\phi (X_{1:T}\|X_0)}\bigg]\bigg] \\
+= & \max \mathbb{E}_{X_0 \sim \hat{p}} \bigg[\mathbb{E}_{X_{1:T} \sim \phi (\cdot\|X_0)} \bigg[\log \frac{\theta (X_T) \prod_{t = 1}^T \theta (X_{t-1}\|X_t)}{\prod_{t = 1}^T p (X_t \| X_{t-1})}\bigg]\bigg]
+\end{align*}$$
+
+The ELBO of VDM has there different decompositions. The first one is
+
+$$\begin{align*}
+ELBO (x_0) = & \underbrace{\mathbb{E}_{X_1 \sim p (\cdot\|x_0)} [\log \theta (x_0 \| X_1)]}_{\text{reconstruction error}} \\
+& - \underbrace{\mathbb{E}_{X_{T-1} \sim p (\cdot\|x_0)} [\mathcal{D}_{KL} (p (\cdot \| X_{T-1}) \|\| \theta)]}_{\text{prior matching error of } X_T} \\
+& - \sum_{t = 1}^{T-1} \underbrace{\mathbb{E}_{(X_{t-1}, X_{t+1}) \sim p (\cdot\|x_0)} [\mathcal{D}_{KL} (p (\cdot \| X_{t-1}) \|\| \theta (\cdot \| X_{t+1}))]}_{\text{consistency error of } X_t}
+\end{align*}$$
+
+The second one is
+
+$$\begin{align*}
+ELBO (x_0) = & \underbrace{\mathbb{E}_{X_1 \sim p (\cdot\|x_0)} [\log \theta (x_0 \| X_1)]}_{\text{reconstruction error}} \\
+& - \underbrace{\mathcal{D}_{KL} (p (\cdot \| x_0) \|\| \theta)]}_{\text{prior matching error of } X_T} \\
+& - \sum_{t = 2}^{T} \underbrace{\mathbb{E}_{X_t \sim p (\cdot\|x_0)} [\mathcal{D}_{KL} (p (\cdot \| X_{t}, x_0) \|\| \theta (\cdot \| X_{t}))]}_{\text{denoising matching error of } X_{t-1}}
+\end{align*}$$
