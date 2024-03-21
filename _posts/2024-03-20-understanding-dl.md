@@ -110,15 +110,13 @@ $$\begin{align*}
 The ELBO of VDM has two different decompositions. The first one is
 
 $$\begin{align*}
-ELBO (x_0) = & \underbrace{\mathbb{E}_{X_1 \sim p (\cdot|x_0)} [\log \theta (x_0 | X_1)]}_{\text{reconstruction error}} \\
-& - \underbrace{\mathbb{E}_{X_{T-1} \sim p (\cdot|x_0)} [\mathcal{D}_{KL} (p (\cdot | X_{T-1}) \| \theta)]}_{\text{prior matching error of } X_T} \\
+ELBO (x_0) = & \underbrace{\mathbb{E}_{X_1 \sim p (\cdot|x_0)} [\log \theta (x_0 | X_1)]}_{\text{reconstruction error}} - \underbrace{\mathbb{E}_{X_{T-1} \sim p (\cdot|x_0)} [\mathcal{D}_{KL} (p (\cdot | X_{T-1}) \| \theta)]}_{\text{prior matching error of } X_T} \\
 & - \sum_{t = 1}^{T-1} \underbrace{\mathbb{E}_{(X_{t-1}, X_{t+1}) \sim p (\cdot|x_0)} [\mathcal{D}_{KL} (p (\cdot | X_{t-1}) \| \theta (\cdot | X_{t+1}))]}_{\text{consistency error of } X_t}
 \end{align*}$$
 
 The second one is
 
 $$\begin{align*}
-ELBO (x_0) = & \underbrace{\mathbb{E}_{X_1 \sim p (\cdot|x_0)} [\log \theta (x_0 | X_1)]}_{\text{reconstruction error}} \\
-& - \underbrace{\mathcal{D}_{KL} (p (\cdot | x_0) \| \theta)}_{\text{prior matching error of } X_T} \\
+ELBO (x_0) = & \underbrace{\mathbb{E}_{X_1 \sim p (\cdot|x_0)} [\log \theta (x_0 | X_1)]}_{\text{reconstruction error}} - \underbrace{\mathcal{D}_{KL} (p (\cdot | x_0) \| \theta)}_{\text{prior matching error of } X_T} \\
 & - \sum_{t = 2}^{T} \underbrace{\mathbb{E}_{X_t \sim p (\cdot|x_0)} [\mathcal{D}_{KL} (p (\cdot | X_{t}, x_0) \| \theta (\cdot | X_{t}))]}_{\text{denoising matching error of } X_{t-1}}
 \end{align*}$$
