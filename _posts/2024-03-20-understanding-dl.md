@@ -12,6 +12,7 @@ tags:
 
 Background
 ---
+We use lower case to denote the observed samples, and upper case to denote the unknown variables. We denote by $X, Y, Z$ the observation, latent, and lable, respectively.
 
 Evidence Lower Bound (ELBO)
 ---

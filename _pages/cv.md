@@ -45,8 +45,8 @@ Skills
   * ### Conferences
     * [D3A 1.0](https://d3aconference.dk/d3a-1-0/), Nyborg, Denmark, 01/02-02/02/2024
     * [Nordic AI Meet](https://2023.nordicaimeet.com/), Copenhagen, Denmark, 02/10-03/10/2023
-    * 35th NeurIPS, online, 06/12-14/12/2021 [[poster](http://tongchen779.github.io/files/poster_nips2020.pdf)]
-    * 34th NeurIPS, online, 06/12-12/12/2020 [[poster](http://tongchen779.github.io/files/poster_nips2021.pdf)]
+    * 35th NeurIPS, online, 06/12-14/12/2021 [[poster](http://tongchen779.github.io/files/poster_nips2021.pdf)]
+    * 34th NeurIPS, online, 06/12-12/12/2020 [[poster](http://tongchen779.github.io/files/poster_nips2020.pdf)]
 
   * ### Workshops & Seminars
     * Workshop on "[Verifiable and Robust AI](https://direc.dk/workshop-on-verifiable-and-robust-ai-2/)", Sønderborg, Denmark, 06/11-10/11/2023
@@ -77,7 +77,7 @@ Skills
 ## Supervision
 
   * ### Master students
-    * Aske Rory Ching, Niklas Joost Borge (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/))
+    * Aske Rory Ching, Niklas Joost Borge (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2024
 
   * ### Bachelor students
-    * Hallgrimur Thorsteinsson, Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/))
+    * Hallgrimur Thorsteinsson, Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Autumn 2023
