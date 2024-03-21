@@ -14,7 +14,7 @@ Background
 ---
 We use lower case $x$ to denote the observed sample, and upper case $X$ to denote the associated unknown variable. We denote by $X, Y, Z$ the observation, latent, and lable, respectively. In most cases, only the variable $X$ can be fully observed, the label $Y$ might be partially observed, and the latent $Z$ is unobservable. 
 
-Now we have three probabilistic worlds: the (unobserved) true world $p$, the observed world $\hat{p}$, and the approximated world $q$. The true world is never observable, and the approximated world is derived from our prior and posterior knowledge. Therefore, the goal is to let our knowledge as close to the ground true as possible, i.e., minimize the probability discrepancy between $\hat{p}$ and $q$. For the following discussion, we will no longer distinguish $p$ and $\hat{p}$ and denote both by $p$ for simplicity.
+The true world is never observable, and the approximated world is derived from our prior and posterior knowledge. Therefore, the goal is to let our knowledge as close to the ground true as possible, i.e., minimize the probability discrepancy between $\hat{p}$ and $q$.
 
 Evidence Lower Bound (ELBO)
 ---
@@ -29,6 +29,12 @@ or
 $$
 p(X, Z) = p (X) p (Z|X)\approx p (X) \phi (Z|X)
 $$
+
+Now we have three probabilistic worlds: 
+
+  * Real world: $p(X), p(Z), p(X|z), p(Z|x)$;
+  * Observed world: $\hat{p} (X)$;
+  * Approximated world: $\theta(Z), \theta(X|z), \phi(X), \phi(Z|x)$.
 
 In the cases where computing the evidence $\log \phi (x)$ is intractable (due to mixture of distributions), we would rather use the marginal 
 
@@ -54,7 +60,7 @@ $$
 ELBO (x) = \underbrace{\log p(x)}_{\text{likelihood}} - \underbrace{\mathcal{D}_{KL} (\phi (\cdot|x) \| p (\cdot|x))}_{\text{posterior matching error}}
 $$
 
-We see that, by maximizing ELBO, we simutaneously minimize the KL-divergence between pair $(\phi(\cdot|x), \theta(\cdot))$ and $(\phi (\cdot|x), p(\cdot|x))$. The former one ensures that $\phi$ is indeed learning some distribution, and the latter one ensures that $\phi$ is getting close to the real distribution.
+We see that, by maximizing ELBO, we simutaneously minimize the KL-divergence between pair $(\phi(\cdot\|x), \theta(\cdot))$ and $(\phi (\cdot\|x), p(\cdot\|x))$. The former one ensures that $\phi$ is indeed learning some distribution, and the latter one ensures that $\phi$ is getting close to the real distribution.
 
 Density Estimation
 ---
