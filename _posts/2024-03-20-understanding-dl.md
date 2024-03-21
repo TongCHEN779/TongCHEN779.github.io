@@ -12,7 +12,9 @@ tags:
 
 Background
 ---
-We use lower case $x$ to denote the observed sample, and upper case $X$ to denote the associated unknown variable. We denote by $X, Y, Z$ the observation, latent, and lable, respectively. In most cases, only the variable $X$ can be fully observed, the label $Y
+We use lower case $x$ to denote the observed sample, and upper case $X$ to denote the associated unknown variable. We denote by $X, Y, Z$ the observation, latent, and lable, respectively. In most cases, only the variable $X$ can be fully observed, the label $Y$ might be partially observed, and the latent $Z$ is unobservable. 
+
+Now we have three probabilistic worlds: the (unobserved) true world $p$, the observed world $\hat{p}$, and the approximated world $q$. The true world is never observable, and the approximated world is derived from our prior and posterior knowledge. Therefore, the goal is to let our knowledge as close to the ground true as possible, i.e., minimize the probability discrepancy between $\hat{p}$ and $q$. For the following discussion, we will no longer distinguish $p$ and $\hat{p}$ and denote both by $p$ for simplicity.
 
 Evidence Lower Bound (ELBO)
 ---
