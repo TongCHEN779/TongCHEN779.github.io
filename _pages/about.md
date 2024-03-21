@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Tong Chen is a postdoc researcher with [Raghavendra Selvan](https://raghavian.github.io/) at [Machine Learning Section](https://di.ku.dk/english/research/machine-learning/), University of Copenhagen. His current research is mainly about efficient and sustainable machine learning, under the [SustainML](https://sustainml.eu/) project. 
+Tong Chen is a postdoc researcher with [Raghavendra Selvan](https://raghavian.github.io/) at University of Copenhagen. His current research is mainly about efficient and sustainable machine learning, under the [SustainML](https://sustainml.eu/) project. 
 
-Previously, Tong obtained his PhD's degree at LAAS-CNRS, [POP](https://www.laas.fr/public/fr/pop/) team, in Toulouse, France, under supervision of [Jean-Bernard Lasserre](https://homepages.laas.fr/lasserre/drupal/home/), [Victor Magron](https://homepages.laas.fr/vmagron/) and [Edouard Pauwels](https://www.irit.fr/~Edouard.Pauwels/) in December 2022. His PhD thesis is about "[Robustness Verification of Neural Networks using Polynomial Optimization](https://theses.hal.science/tel-04008562/document)", here are the [slides](http://tongchen779.github.io/files/PhD_defense.pdf) for the defense. He received a master's degree in September 2019 in Statistics and Machine Learning from Université Paris Saclay in France, and a bachelor's degree in June 2017 in Mathematics from [Wuhan University](http://maths.whu.edu.cn/Englishversion/index.htm) in China. Here is his [CV](http://tongchen779.github.io/files/CV_in_english.pdf).
+Previously, Tong obtained his PhD's degree at LAAS-CNRS, [POP](https://www.laas.fr/public/fr/pop/) team, in Toulouse, France, under supervision of [Edouard Pauwels](https://www.irit.fr/~Edouard.Pauwels/), [Victor Magron](https://homepages.laas.fr/vmagron/), and [Jean-Bernard Lasserre](https://homepages.laas.fr/lasserre/drupal/home/) in December 2022. He received a master's degree in September 2019 in Statistics and Machine Learning from Université Paris Saclay in France, and a bachelor's degree in June 2017 in Mathematics from [Wuhan University](http://maths.whu.edu.cn/Englishversion/index.htm) in China.
 
 # Research Interests
 
