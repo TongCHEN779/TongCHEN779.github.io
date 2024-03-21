@@ -107,7 +107,7 @@ $$\begin{align*}
 = & \max \mathbb{E}_{X_0 \sim \hat{p}} \bigg[\mathbb{E}_{X_{1:T} \sim \phi (\cdot|X_0)} \bigg[\log \frac{\theta (X_T) \prod_{t = 1}^T \theta (X_{t-1}|X_t)}{\prod_{t = 1}^T p (X_t | X_{t-1})}\bigg]\bigg]
 \end{align*}$$
 
-The ELBO of VDM has there different decompositions. The first one is
+The ELBO of VDM has two different decompositions. The first one is
 
 $$\begin{align*}
 ELBO (x_0) = & \underbrace{\mathbb{E}_{X_1 \sim p (\cdot|x_0)} [\log \theta (x_0 | X_1)]}_{\text{reconstruction error}} \\
