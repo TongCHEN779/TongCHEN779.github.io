@@ -42,7 +42,7 @@ $$
 \log p (x) \ge \mathbb{E}_{Z \sim \phi (\cdot|x)} \bigg[\log \frac{p (x, Z)}{\phi (Z|x)}\bigg] = ELBO (x)
 $$
 
-Actually, $\log p (x) = ELBO (x) + \mathcal{D}_{KL} (\phi (\cdot|x) \| p(\cdot|x))$, which means we must pay a price if we use an approximation of the posterior $p(\cdot|x)$. Futhermore, ELBO can be written as the difference between a reconstruction error and a prior matching error:
+Actually, $\log p (x) = ELBO (x) + \mathcal{D}_{KL} (\phi (\cdot{|}x) \|| p(\cdot|x))$, which means we must pay a price if we use an approximation of the posterior $p(\cdot|x)$. Futhermore, ELBO can be written as the difference between a reconstruction error and a prior matching error:
 
 $$
 ELBO (x) = \underbrace{\mathbb{E}_{Z \sim \phi (\cdot|x)} [\log \theta (x|Z)]}_{\text{reconstruction error}} - \underbrace{\mathcal{D}_{KL} (\phi (\cdot|x) \| \theta (\cdot))}_{\text{prior matching error}}
