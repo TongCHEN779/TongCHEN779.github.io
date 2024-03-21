@@ -16,7 +16,25 @@ We use lower case $x$ to denote the observed sample, and upper case $X$ to denot
 
 Evidence Lower Bound (ELBO)
 ---
-We have an observed variable $X$ and one latent variable $Z$, the joint distribution $p(X, Z)$ can be parameterized by $p(X, Z) = p (Z) p (X|Z) = \theta (Z) \theta (X|Z)$, or $p(X, Z) = p (X) p (Z|X)\approx p (X) \phi (Z|X)$. In the cases where computing the evidence $\log \phi (x)$ is intractable (due to mixture of distributions), we would rather use the marginal $\log \int \phi (x, z) \text{d} z = \int \phi (x|z) \phi (z) \text{d} z$. If the integral over $z$ is tractable, then EM algorithm can be applied. Otherwise, we need to optimize its lower bound, called evidence lower bound. For any observed sample $x$, the log likelihood is lower bounded by
+We have an observed variable $X$ and one latent variable $Z$, the joint distribution $p(X, Z)$ can be parameterized by 
+
+$$
+p(X, Z) = p (Z) p (X|Z) = \theta (Z) \theta (X|Z)
+$$
+
+or 
+
+$$
+p(X, Z) = p (X) p (Z|X)\approx p (X) \phi (Z|X)
+$$
+
+In the cases where computing the evidence $\log \phi (x)$ is intractable (due to mixture of distributions), we would rather use the marginal 
+
+$$
+\log \int \phi (x, z) \text{d} z = \int \phi (x|z) \phi (z) \text{d} z
+$$
+
+If the integral over $z$ is tractable, then EM algorithm can be applied. Otherwise, we need to optimize its lower bound, called evidence lower bound. For any observed sample $x$, the log likelihood is lower bounded by
 
 $$
 \log p (x) \ge \mathbb{E}_{Z \sim \phi (\cdot|x)} \bigg[\log \frac{p (x, Z)}{\phi (Z|x)}\bigg] = ELBO (x)
