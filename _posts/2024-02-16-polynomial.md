@@ -1,6 +1,6 @@
 ---
 title: 'Polynomials: the Good (theory), the Bad (practice), and the Ugly (from theory to practice)'
-date: 2024-03-20
+date: 2024-02-16
 permalink: /posts/poly/
 tags:
   - Polynomial Optimization
