@@ -32,6 +32,7 @@ Polynomial Optimization Software:
 
 Robustness Verification Software:
 ---
+* [AutoAttack](https://github.com/fra31/auto-attack): State-of-the-art automated adversarial attacks.
 * [Foolbox](https://github.com/bethgelab/foolbox): Fast adversarial attacks to benchmark the robustness of machine learning models by PyTorch, TensorFlow, and JAX.
 * [jax_verify](https://github.com/deepmind/jax_verify): Neural network verification in JAX.
 * [ERAN](https://github.com/eth-sri/eran): **E**TH **R**obustness **A**nalyzer for **N**eural networks.
