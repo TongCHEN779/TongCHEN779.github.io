@@ -19,25 +19,25 @@ Evidence Lower Bound (ELBO)
 We have an observed variable $X$ and one latent variable $Z$, the joint distribution $p(X, Z)$ can be parameterized by 
 
 $$
-p(X, Z) = p (Z) p (X|Z) = \theta (Z) \theta (X|Z)
+p(X, Z) = p (Z) p (X|Z) \approx \theta (Z) \theta (X|Z)
 $$
 
 or 
 
 $$
-p(X, Z) = p (X) p (Z|X)\approx p (X) \phi (Z|X)
+p(X, Z) = p (X) p (Z|X) \approx \phi (X) \phi (Z|X)
 $$
 
 Now we have three probabilistic worlds: 
 
-  * Real world: $p(X), p(Z), p(X\|z), p(Z\|x)$;
+  * Real world: $p(X, Z), p(X), p(Z), p(X\|z), p(Z\|x)$;
   * Observed world: $\hat{p} (X)$;
   * Approximated world: $\theta(Z), \theta(X\|z), \phi(X), \phi(Z\|x)$.
 
-The true world is never observable, and the approximated world is derived from our prior and posterior knowledge. Therefore, the goal is to let our knowledge as close to the ground true as possible, i.e., minimize the probability discrepancy between $\hat{p}$ and $\phi$. In the cases where computing the evidence $\log \phi (x)$ is intractable (due to mixture of distributions), we would rather use the marginal 
+The true world is never observable, and the approximated world is derived from our prior and posterior knowledge. Therefore, the goal is to let our knowledge as close to the ground true as possible, i.e., minimize the probability discrepancy between $\hat{p} (x)$ and $p(x)$. In the cases where computing the evidence $\log p (x)$ is intractable (due to mixture of distributions), we would rather use the marginal 
 
 $$
-\log \int \phi (x, z) \text{d} z = \int \phi (x|z) \phi (z) \text{d} z
+\log p(x) = \log \int p (x, z) \text{d} z = \log \int \theta (x|z) \theta (z) \text{d} z
 $$
 
 If the integral over $z$ is tractable, then EM algorithm can be applied. Otherwise, we need to optimize its lower bound, called evidence lower bound. For any observed sample $x$, the log likelihood is lower bounded by
