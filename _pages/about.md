@@ -10,7 +10,7 @@ redirect_from:
 
 Tong Chen is a postdoc researcher with [Raghavendra Selvan](https://raghavian.github.io/) at University of Copenhagen. His current research is mainly about efficient and sustainable machine learning, under the [SustainML](https://sustainml.eu/) project. 
 
-Previously, Tong obtained his PhD's degree at LAAS-CNRS, [POP](https://www.laas.fr/public/fr/pop/) team, in Toulouse, France, under supervision of [Edouard Pauwels](https://www.irit.fr/~Edouard.Pauwels/), [Victor Magron](https://homepages.laas.fr/vmagron/), and [Jean-Bernard Lasserre](https://homepages.laas.fr/lasserre/drupal/home/) in December 2022. He received a master's degree in September 2019 in Statistics and Machine Learning from Université Paris Saclay in France, and a bachelor's degree in June 2017 in Mathematics from [Wuhan University](http://maths.whu.edu.cn/Englishversion/index.htm) in China.
+Previously, Tong obtained his PhD's degree at LAAS-CNRS, [POP](https://www.laas.fr/en/teams/pop/) team, in Toulouse, France, under supervision of [Edouard Pauwels](https://www.irit.fr/~Edouard.Pauwels/), [Victor Magron](https://homepages.laas.fr/vmagron/), and [Jean-Bernard Lasserre](https://homepages.laas.fr/lasserre/drupal/home/) in December 2022. He received a master's degree in September 2019 in Statistics and Machine Learning from Université Paris Saclay in France, and a bachelor's degree in June 2017 in Mathematics from [Wuhan University](http://maths.whu.edu.cn/Englishversion/index.htm) in China.
 
 # Research Interests
 
