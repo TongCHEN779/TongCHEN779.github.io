@@ -11,7 +11,7 @@ tags:
 Background
 ---
 
-Polynomial Optimization (POP) and Semidefinite Programming (SDP)
+Semidefinite Programming (SDP)
 ---
 
 Non-convex Set Approximation
