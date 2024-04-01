@@ -10,6 +10,9 @@ tags:
 
 Background
 ---
+we play and optimize with polynomials:
+
+$$\min_{\mathbf{x}} f(\mathbf{x}), \; \text{s.t. } g_i (\mathbf{x}) \ge 0, \; i = 1, \ldots, p.$$
 
 Semidefinite Programming (SDP)
 ---
