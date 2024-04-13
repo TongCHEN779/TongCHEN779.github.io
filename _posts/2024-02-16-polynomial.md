@@ -12,7 +12,7 @@ Background
 ---
 We focus on polynomial optimization problem (POP):
 
-$$\min_{\mathbf{x} \in \mathbf{K}} f(\mathbf{x}),$$
+$$\min_{\mathbf{x} \in \mathbf{K}} f (\mathbf{x}),$$
 
 or its dual form:
 
@@ -66,12 +66,55 @@ also gives an lower bound. For more systematic and constructive ways of converge
 
 Non-convex Set Approximation
 ---
+We study the output shape of the unit box $\mathcal{B}^n_1 := [-1, 1]^n$ under a semialgebraic mapping $F: \mathbb{R}^n \rightarrow \mathbb{R}^m$. We assume that $F (\mathcal{B}^n_1) \subseteq \mathcal{B}^m_M := [-M, M]^m$. Then we can approximate the volume of $F (\mathcal{B}^n_1)$ using the following convergent series:
+
+$$\begin{align*}
+v_d := & \inf_{f \in \mathbb{R} [\mathbf{z}]} \quad \int_{\mathcal{B}^m_M} f (\mathbf{z}) \text{d} \mathbf{z} \\
+& \text{s.t.} \quad \begin{cases}
+f - 1 \in Q_d (F (\mathcal{B}^n_1)) \subseteq \mathbb{R} [\mathbf{x}, \mathbf{z}]; \\
+f \in Q_d (\mathcal{B}^m_M) \subseteq \mathbb{R} [\mathbf{z}]. 
+\end{cases}
+\end{align*}$$
 
 Robust Classification
 ---
+Given set $\mathcal{T} = \bigcup_i \mathcal{T}_i \subseteq \mathcal{B}^n_M$, find polynomial $f$ such that $f \ge 0$ over $\mathcal{B}^n_M$, and $f (\mathbf{x}) \in [i-1, i]$ for all $\mathbf{x} \in \mathcal{T}_i$. If $\mathcal{T}_i = \{\mathbf{x}_i^{(j)}\}$ is a discrete set, then the standard classification problem can be formulated as
+
+$$\begin{align*}
+\min_{f} & \quad 1 \text{ or } \int_{\mathcal{B}^n_M} f (\mathbf{x}) \text{d} \mathbf{x} \\
+\text{s.t.} & \quad \begin{cases}
+  f \in Q_d (\mathcal{B}^n_M); \\
+  f (\mathbf{x}_i^{(j)}) - i, \; i + 1 - f (\mathbf{x}_i^{(j)}) \ge 0, \; \forall i, j.
+\end{cases}
+\end{align*}$$
+
+If $\mathcal{T}_i = \{\mathcal{B}^n_{\varepsilon} (\mathbf{x}_i^{(j)})\}$, then the robust classification problem can be formulated as
+
+$$\begin{align*}
+\min_{f} & \quad 1 \text{ or } \int_{\mathcal{B}^n_M} f (\mathbf{x}) \text{d} \mathbf{x} \\
+\text{s.t.} & \quad \begin{cases}
+f \in Q_d (\mathcal{B}^n_M); \\
+f - i, \; i+1 - f \in Q_d (\mathcal{B}^n_{\varepsilon} (\mathbf{x}_i^{(j)})), \; \forall i, j.
+\end{cases}
+\end{align*}$$
 
 ReLU Network Pruning
 ---
+Given a pretrained ReLU network $f (\mathbf{x}) = \mathbf{C} \cdot \text{ReLU} (\mathbf{Ax} + \mathbf{b})$, we are going to find an optimal mask $\mathbf{M}$ of $\mathbf{A}$, with given pruning size $\vert\vert \mathbf{M} \vert\vert_0 = k$, such that the drop of generalization loss is minimized:
 
-Dataset Condensation
----
+$$\min_{\mathbf{M}} \; \mathbb{E} [l (f_{\mathbf{M}} (X), Y)].$$
+
+Empirically, the expectation is computed over the empirical distribution $\{(\mathbf{x}_i, \mathbf{y}_i)\}_{i = 1}^N$, and we take the loss function $l$ to be squared loss. Then the problem becomes
+
+$$\min_{\mathbf{M}} \; \frac{1}{N} \sum_{i = 1}^N (f_{\mathbf{M}} (\mathbf{x}_i) - \mathbf{y}_i)^2.$$
+
+By semialgebraicity of $f$, we rewrite the above problem as a quadratic POP:
+
+$$\begin{align*}
+\min_{\mathbf{M}, \mathbf{z}_i} \; & \frac{1}{N} \sum_{i = 1}^N (\mathbf{C} \mathbf{z}_i - \mathbf{y}_i)^2 \\
+\text{s.t.} \; & \begin{cases}
+\mathbf{z}_i (\mathbf{z}_i - (\mathbf{A} \circ \mathbf{M}) \mathbf{x}_i - \mathbf{b}) = 0, \\
+\mathbf{z}_i - (\mathbf{A} \circ \mathbf{M}) \mathbf{x}_i - \mathbf{b} \ge 0, \\
+\mathbf{z}_i \ge 0.
+\end{cases}
+\end{align*}$$
