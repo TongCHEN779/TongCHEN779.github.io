@@ -113,8 +113,8 @@ By semialgebraicity of $f$, we rewrite the above problem as a quadratic POP:
 $$\begin{align*}
 \min_{\mathbf{M}, \mathbf{z}_i} \; & \frac{1}{N} \sum_{i = 1}^N (\mathbf{C} \mathbf{z}_i - \mathbf{y}_i)^2 \\
 \text{s.t.} \; & \begin{cases}
-\mathbf{z}_i (\mathbf{z}_i - (\mathbf{A} \circ \mathbf{M}) \mathbf{x}_i - \mathbf{b}) = 0, \\
-\mathbf{z}_i - (\mathbf{A} \circ \mathbf{M}) \mathbf{x}_i - \mathbf{b} \ge 0, \\
+\mathbf{z}_i (\mathbf{z}_i - (\mathbf{A} \odot \mathbf{M}) \mathbf{x}_i - \mathbf{b}) = 0, \\
+\mathbf{z}_i - (\mathbf{A} \odot \mathbf{M}) \mathbf{x}_i - \mathbf{b} \ge 0, \\
 \mathbf{z}_i \ge 0.
 \end{cases}
 \end{align*}$$
