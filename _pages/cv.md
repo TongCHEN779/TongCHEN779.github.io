@@ -43,13 +43,13 @@ Skills
 ## Activities & Events
 
   * ### Conferences
+    * Conference on "[Generative AI in Life Science](https://genlife.dk/)", Copenhagen, Denmark, 15/04-16/04/2024
     * [D3A 1.0](https://d3aconference.dk/d3a-1-0/), Nyborg, Denmark, 01/02-02/02/2024
     * [Nordic AI Meet](https://2023.nordicaimeet.com/), Copenhagen, Denmark, 02/10-03/10/2023
     * 35th NeurIPS, online, 06/12-14/12/2021 [[poster](http://tongchen779.github.io/files/poster_nips2021.pdf)]
     * 34th NeurIPS, online, 06/12-12/12/2020 [[poster](http://tongchen779.github.io/files/poster_nips2020.pdf)]
 
   * ### Workshops & Seminars
-    * Conference on "[Generative AI in Life Science](https://genlife.dk/)", Copenhagen, Denmark, 15/04-16/04/2024
     * Workshop on "[AI and Topology](https://di.ku.dk/english/event-calendar-2024/international-workshop-on-ai-and-topology/)", Holte, Denmark, 08/04-10/04/2024
     * Workshop on "[Verifiable and Robust AI](https://direc.dk/workshop-on-verifiable-and-robust-ai-2/)", Sønderborg, Denmark, 06/11-10/11/2023
     * [ELLIS RobustML Workshop](https://sites.google.com/view/ellis-robust-ml-workshop/home), Helsinki, Finland, 23/09-24/09/2023
