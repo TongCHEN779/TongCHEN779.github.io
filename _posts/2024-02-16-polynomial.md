@@ -18,7 +18,7 @@ or its dual form:
 
 $$\max_{\lambda} \; \lambda, \; \text{s.t. } f\big\vert_{\mathbf{K}} - \lambda \ge 0,$$
 
-where $\mathbf{K} = \{\mathbf{x}: g_i (\mathbf{x}) \ge 0, \; i = 1, \ldots, p\}$ is called a basic semialgebraic set.
+where $\mathbf{K} = \\{\mathbf{x}: g_i (\mathbf{x}) \ge 0, \; i = 1, \ldots, p\\}$ is called a basic semialgebraic set.
 
 Relaxation Techniques
 ---
