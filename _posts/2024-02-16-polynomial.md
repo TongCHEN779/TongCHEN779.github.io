@@ -25,7 +25,6 @@ Relaxation Techniques
 The POP above is NP-hard, we relax it using two techniques: lifting (primal) and sum-of-squares (dual).
 
 ### Lifting
----
 We introduce the Riesz functional, defined by the following linear operator:
 
 $$\mathcal{L}_{\mathbf{y}}: \mathbb{R} [\mathbf{x}] \longrightarrow \mathbb{R}, \; \mathbf{x}^{\alpha} \mapsto y_{\alpha}, \; \alpha \in \mathbb{N}^n.$$
@@ -49,7 +48,6 @@ $$\begin{align*}
 \end{align*}$$
 
 ### Sum-Of-Squares (SOS)
----
 Lifting technique for the primal form of POP can be similarly derived from the dual form. In fact, the nonnegativity constraint $f\big\vert_{\mathbf{K}} - \lambda \ge 0$ can be relaxed to 
 
 $$f - \lambda = \sigma_0 + \sum_{i = 1}^p \sigma_i g_i,$$
