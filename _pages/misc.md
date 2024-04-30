@@ -5,6 +5,6 @@ permalink: /misc/
 author_profile: true
 ---
 
-{% for post in site.posts %}
+{% for post in site.misc %}
   {% include archive-single.html %}
 {% endfor %}
