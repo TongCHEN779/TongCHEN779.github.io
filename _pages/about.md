@@ -32,7 +32,7 @@ I have developed an SDP relaxation framework based on Lasserre's moment-SOS hier
 
 ## 3. Machine Learning for Polynomial Optimization (ML4POP)
 
-Polynomials are GOOD (in theory), BAD (in practice), and UGLY (from theory to practice). My hope is to make them also GOOD in pactice, and beautiful from theory to practice. In order to approach that, one possible way is to automate the acceleration techniques (such as sparsity, low-rank decomposition) of optimization instead of static methods.
+Polynomials are GOOD (in theory), BAD (in practice), and UGLY (from theory to practice). My hope is to make them also GOOD in pactice, and BEAUTIFUL from theory to practice. To this end, one possible way is to automate the acceleration techniques (such as sparsity, low-rank decomposition) of optimization instead of static methods.
 
 - Learning dynamic SOS proof using RL method: Krivine-Stengle and Putinar's positivstellensatz (P-satz) are common tools to certify positivity of a polynomial. However, existing static hierarchies suffer from numerical intractability. Using RL method such as DQN to dynamically search the optimal hierarchies is a promising and challenging open problem for SOS proof.
 
