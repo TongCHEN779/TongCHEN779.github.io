@@ -79,7 +79,9 @@ Skills
 ## Supervision
 
   * ### Master students
-    * Aske Rory Ching, Niklas Joost Borge (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2024
+    * Philipp Hinz, Spring 2024. Thesis: Development and Implementation of a Reinforcement Learning Agent for the Web-based Game Polyburn.
+
+    * Aske Rory Ching, Niklas Joost Borge (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2024. Thesis: Towards adversarially robust dataset compression.
 
   * ### Bachelor students
-    * Hallgrimur Thorsteinsson, Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Autumn 2023
+    * Hallgrimur Thorsteinsson, Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Autumn 2023. Thesis: Adversarial Fine-tuning of Compressed Neural Networks for Joint Improvement of Robustness and Efficiency.
