@@ -89,4 +89,5 @@ Skills
     * Hallgrimur Thorsteinsson, Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Autumn 2023. Thesis: Adversarial Fine-tuning of Compressed Neural Networks for Joint Improvement of Robustness and Efficiency.
 
 ## Review Experience
+
 MICCAI 2024, ICLR 2025, ICML 2025, NeurIPS 2024/2025, AISTATS 2025, Array 2025
