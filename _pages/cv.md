@@ -43,6 +43,7 @@ Skills
 ## Activities & Events
 
   * ### Conferences
+    * [D3A 2.0](https://d3aconference.dk/d3a-2-0/), Nyborg, Denmark, 22/10-23/10/2024
     * Conference on "[Generative AI in Life Science](https://genlife.dk/)", Copenhagen, Denmark, 15/04-16/04/2024
     * [D3A 1.0](https://d3aconference.dk/d3a-1-0/), Nyborg, Denmark, 01/02-02/02/2024
     * [Nordic AI Meet](https://2023.nordicaimeet.com/), Copenhagen, Denmark, 02/10-03/10/2023
@@ -72,6 +73,7 @@ Skills
     * [BrainPOP](https://homepages.laas.fr/vmagron/brainpop.html) Seminar, online, 11/09/2020 [[slides](http://tongchen779.github.io/files/presentation_brainpop_lip.pdf)]
 
   * ### Summer Schools
+    * Summer school on "[Biomedical Image Analysis: from Acquisition to Fairness and Bias](https://biomed.compute.dtu.dk/)", Svendborg, Denmark, 12/08–16/08/2023
     * Summer school on "[Missing Data, Augmentation and Generative models](https://missing-data.compute.dtu.dk/)", Kobæk, Denmark, 14/08–18/08/2023
     * Summer School on "[Moments and Positive Polynomials and their Applications](https://indico.math.cnrs.fr/event/7624/)", Toulouse, France, 27/06-30/06/2022
 
@@ -85,3 +87,6 @@ Skills
 
   * ### Bachelor students
     * Hallgrimur Thorsteinsson, Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Autumn 2023. Thesis: Adversarial Fine-tuning of Compressed Neural Networks for Joint Improvement of Robustness and Efficiency.
+
+## Review Experience
+MICCAI 2024, ICLR 2025, ICML 2025, NeurIPS 2024/2025, AISTATS 2025, Array 2025
