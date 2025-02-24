@@ -7,12 +7,12 @@ author_profile: true
 
 Efficient and Sustainable Machine Learning:
 ---
-* Google Research, 2022 & beyond: [Algorithms for efficient deep learning](https://ai.googleblog.com/2023/02/google-research-2022-beyond-algorithms.html).
+* [Algorithms for efficient deep learning](https://ai.googleblog.com/2023/02/google-research-2022-beyond-algorithms.html) (Google Research, 2022 & beyond).
 * [AutoML](https://www.automl.org/): Automation of machine learning workshop.
 * [BEARD](https://beard-leaderboard.github.io/): **BE**nchmarking the **A**dversarial **R**obustness for **D**ataset distillation.
 * [DC-Bench](https://dc-bench.github.io/): A standardized benchmark for dataset condensation.
+* [In AI, is bigger always better?](https://www.nature.com/articles/d41586-023-00641-w) (Nature).
 * [MIT HAN Lab](https://hanlab.mit.edu/): Efficient AI computing lab at MIT.
-* Nature: [In AI, is bigger always better?](https://www.nature.com/articles/d41586-023-00641-w).
 * [Numenta](https://www.numenta.com/): A young company about neuroscience and AI.
 
 Seminars on Optimization:
