@@ -66,6 +66,7 @@ Skills
     * Workshop on "[Computational Aspects of Geometry](https://perso.math.univ-toulouse.fr/statistics-geometry-and-topology/accueil/computational-aspects-of-geometry/)", Toulouse, France, 06/11-08/11/2019
 
   * ### Seminars
+    * ML Section Talk, hybrid, 24/03/2025 [[slides](http://tongchen779.github.io/files/presentation_section25.pdf)]
     * ML Section Talk, hybrid, 19/02/2024 [[slides](http://tongchen779.github.io/files/presentation_section24.pdf)]
     * ML Section Talk, hybrid, 13/12/2023 [[slides](http://tongchen779.github.io/files/presentation_section23.pdf)]
     * [SustainML Reading Group](https://github.com/saintslab/SustainableML), hybrid, 21/06/2023 [[slides](http://tongchen779.github.io/files/presentation_image.pdf)]
@@ -95,7 +96,7 @@ Skills
   * Machine Learning for Science (MLS), co-lecturer with [Raghavendra Selvan](https://raghavian.github.io/), Spring 2025.
 
 ## Funding
-  * EU Horizon 2024 Grant to DATAPACT: Compliance by Design of Data/AI Operations and Pipelines, co-applicant with [Raghavendra Selvan](https://raghavian.github.io/), Autumn 2024.
+  * EU Horizon 2024 Grant to [DATAPACT](https://datapact.eu/): Compliance by Design of Data/AI Operations and Pipelines, co-applicant with [Raghavendra Selvan](https://raghavian.github.io/), Autumn 2024.
 
 ## Review Activities
 
