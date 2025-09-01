@@ -43,6 +43,7 @@ Skills
 ## Activities & Events
 
   * ### Conferences
+    * [SaTML](https://satml.org/2025/), Copenhagen, Denmark, 09/04-11/04/2025
     * [D3A 2.0](https://d3aconference.dk/d3a-2-0/), Nyborg, Denmark, 22/10-23/10/2024
     * Conference on "[Generative AI in Life Science](https://genlife.dk/)", Copenhagen, Denmark, 15/04-16/04/2024
     * [D3A 1.0](https://d3aconference.dk/d3a-1-0/), Nyborg, Denmark, 01/02-02/02/2024
@@ -81,13 +82,21 @@ Skills
 ## Supervision
 
   * ### Master students
+    * Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2025. Thesis: Fair and Parameter-Efficient Finetuning in Medical Image Analysis.
+    * Laust Skov Hansen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2025. Thesis: Group Influence Approximations for Model Agnostic Coreset Selection.
     * Philipp Hinz, Spring 2024. Thesis: Development and Implementation of a Reinforcement Learning Agent for the Web-based Game Polyburn.
-
     * Aske Rory Ching, Niklas Joost Borge (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2024. Thesis: Towards adversarially robust dataset compression.
 
   * ### Bachelor students
+    * Zeyu Deng, Spring 2025. Thesis: Can Uncertainty be Used for Coreset Selection?
     * Hallgrimur Thorsteinsson, Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Autumn 2023. Thesis: Adversarial Fine-tuning of Compressed Neural Networks for Joint Improvement of Robustness and Efficiency.
 
-## Review Experience
+## Teaching Experience
+  * Machine Learning for Science (MLS), co-lecturer with [Raghavendra Selvan](https://raghavian.github.io/), Spring 2025.
 
-MICCAI 2024, ICLR 2025, ICML 2025, NeurIPS 2024/2025, AISTATS 2025, IMA 2024, Array 2025
+## Funding
+  * EU Horizon 2024 Grant to DATAPACT: Compliance by Design of Data/AI Operations and Pipelines, co-applicant with [Raghavendra Selvan](https://raghavian.github.io/), Autumn 2024.
+
+## Review Activities
+
+MICCAI 2024, IMA 2024, ICLR 2025, ICML 2025, NeurIPS 2024/2025, AISTATS 2025, Array 2025.
