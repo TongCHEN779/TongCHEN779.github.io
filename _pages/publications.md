@@ -7,6 +7,8 @@ author_profile: true
 
 Preprints / Under Review
 ---
+1. **Tong Chen**, Raghavendra Selvan: A Discrepancy-Based Perspective on Dataset Condensation, preprint, 2025. [[link](https://arxiv.org/pdf/2509.10367.pdf)]
+
 1. Hallgrimur Thorsteinsson, Valdemar J. Henriksen, **Tong Chen**, Raghavendra Selvan: Adversarial Fine-tuning of Compressed Neural Networks for Joint Improvement of Robustness and Efficiency, preprint, 2024. [[link](https://arxiv.org/pdf/2403.09441.pdf), [code](https://github.com/saintslab/Adver-Fine)]
 
 Peer-Reviewed Conference Papers
