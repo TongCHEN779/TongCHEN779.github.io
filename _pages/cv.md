@@ -83,6 +83,7 @@ Skills
 ## Supervision
 
   * ### Master students
+    * Ying Pei, Autumn 2025. Thesis: 
     * Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2025. Thesis: Fair and Parameter-Efficient Finetuning in Medical Image Analysis.
     * Laust Skov Hansen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2025. Thesis: Group Influence Approximations for Model Agnostic Coreset Selection.
     * Philipp Hinz, Spring 2024. Thesis: Development and Implementation of a Reinforcement Learning Agent for the Web-based Game Polyburn.
@@ -100,4 +101,4 @@ Skills
 
 ## Review Activities
 
-MICCAI 2024, IMA 2024, ICLR 2025, ICML 2025, NeurIPS 2024/2025, AISTATS 2025, Array 2025.
+MICCAI 2024, IMA 2024, ICLR 2025/2026, ICML 2025, NeurIPS 2024/2025, AISTATS 2025/2026, Array 2025.
