@@ -43,6 +43,7 @@ Skills
 ## Activities & Events
 
   * ### Conferences
+    * [AIS25](https://ais25.eu/), Copenhagen, Denmark, 03/11-04/11/2025
     * [SaTML](https://satml.org/2025/), Copenhagen, Denmark, 09/04-11/04/2025
     * [D3A 2.0](https://d3aconference.dk/d3a-2-0/), Nyborg, Denmark, 22/10-23/10/2024
     * Conference on "[Generative AI in Life Science](https://genlife.dk/)", Copenhagen, Denmark, 15/04-16/04/2024
@@ -83,10 +84,10 @@ Skills
 ## Supervision
 
   * ### Master students
-    * Ying Pei, Autumn 2025. Thesis: 
+    * Ying Pei, Autumn 2025. Report: Compresso - An Interactive Application for Dataset Compression Using Minimal Finite Covering (MFC).
     * Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2025. Thesis: Fair and Parameter-Efficient Finetuning in Medical Image Analysis.
     * Laust Skov Hansen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2025. Thesis: Group Influence Approximations for Model Agnostic Coreset Selection.
-    * Philipp Hinz, Spring 2024. Thesis: Development and Implementation of a Reinforcement Learning Agent for the Web-based Game Polyburn.
+    * Philipp Hinz, Spring 2024. Report: Development and Implementation of a Reinforcement Learning Agent for the Web-based Game Polyburn.
     * Aske Rory Ching, Niklas Joost Borge (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Spring 2024. Thesis: Towards adversarially robust dataset compression.
 
   * ### Bachelor students
