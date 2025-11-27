@@ -95,11 +95,13 @@ Skills
     * Hallgrimur Thorsteinsson, Valdemar Jacobi Henriksen (co-supervised with [Raghavendra Selvan](https://raghavian.github.io/)), Autumn 2023. Thesis: Adversarial Fine-tuning of Compressed Neural Networks for Joint Improvement of Robustness and Efficiency.
 
 ## Teaching Experience
-  * Machine Learning for Science (MLS), co-lecturer with [Raghavendra Selvan](https://raghavian.github.io/), Spring 2025.
+  * Machine Learning for Science (MLS), co-lecturer with [Raghavendra Selvan](https://raghavian.github.io/), Spring 2025. [[lec4](http://tongchen779.github.io/files/mls_lec4.pdf), [lec8](http://tongchen779.github.io/files/mls_lec8.pdf)]
+  * Advanced Topics in Deep Learning (ATDL), guest-lecturer, Autumn 2024. [[slides](http://tongchen779.github.io/files/atdl.pdf)]
+  * Data Analysis and Machine Learning, guest-lecturer, Spring 2024.
 
 ## Funding
   * EU Horizon 2024 Grant to [DATAPACT](https://datapact.eu/): Compliance by Design of Data/AI Operations and Pipelines, co-applicant with [Raghavendra Selvan](https://raghavian.github.io/), Autumn 2024.
 
 ## Review Activities
 
-MICCAI 2024, IMA 2024, ICLR 2025/2026, ICML 2025, NeurIPS 2024/2025, AISTATS 2025/2026, Array 2025.
+MICCAI 2024, IMA 2024, ICLR 2025/2026, ICML 2025, NeurIPS 2024/2025, AISTATS 2025/2026, Array 2025, ECIR 2026.
