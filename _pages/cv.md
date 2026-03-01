@@ -43,6 +43,7 @@ Skills
 ## Activities & Events
 
   * ### Conferences
+    * [EurIPS](https://eurips.cc/), Copenhagen, Denmark, 02/12-07/12/2025
     * [AIS25](https://ais25.eu/), Copenhagen, Denmark, 03/11-04/11/2025
     * [SaTML](https://satml.org/2025/), Copenhagen, Denmark, 09/04-11/04/2025
     * [D3A 2.0](https://d3aconference.dk/d3a-2-0/), Nyborg, Denmark, 22/10-23/10/2024
