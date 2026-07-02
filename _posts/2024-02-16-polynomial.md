@@ -46,7 +46,6 @@ Drag the slider to move the level $\lambda$. As long as $f (x) - \lambda \ge 0$ 
   var W = canvas.width, H = canvas.height;
   var xmin = -1.35, xmax = 1.35, ymin = -0.75, ymax = 1.1;
   function f(x) { return Math.pow(x, 4) - x * x + 0.2 * x + 0.3; }
-  // minimum of f on [-1,1], computed numerically once
   var fstar = Infinity, xstar = 0;
   for (var i = 0; i <= 2000; i++) {
     var x = -1 + 2 * i / 2000, v = f(x);
@@ -56,14 +55,11 @@ Drag the slider to move the level $\lambda$. As long as $f (x) - \lambda \ge 0$ 
   function py(y) { return H - (y - ymin) / (ymax - ymin) * H; }
   function draw(lam) {
     ctx.clearRect(0, 0, W, H);
-    // feasible set K = [-1,1]
     ctx.fillStyle = 'rgba(120,180,255,0.15)';
     ctx.fillRect(px(-1), 0, px(1) - px(-1), H);
-    // axes
     ctx.strokeStyle = '#999'; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(0, py(0)); ctx.lineTo(W, py(0)); ctx.stroke();
     ctx.beginPath(); ctx.moveTo(px(0), 0); ctx.lineTo(px(0), H); ctx.stroke();
-    // violation region: where f(x) < lambda on K
     ctx.fillStyle = 'rgba(255,80,80,0.25)';
     for (var i = 0; i <= 600; i++) {
       var x = -1 + 2 * i / 600;
@@ -72,7 +68,6 @@ Drag the slider to move the level $\lambda$. As long as $f (x) - \lambda \ge 0$ 
         ctx.fillRect(xp - 1, py(lam), 2, py(f(x)) - py(lam));
       }
     }
-    // curve f
     ctx.strokeStyle = '#1f4e9c'; ctx.lineWidth = 2;
     ctx.beginPath();
     for (var j = 0; j <= 600; j++) {
@@ -81,14 +76,11 @@ Drag the slider to move the level $\lambda$. As long as $f (x) - \lambda \ge 0$ 
       if (j === 0) ctx.moveTo(px(xx), py(yy)); else ctx.lineTo(px(xx), py(yy));
     }
     ctx.stroke();
-    // level line lambda
     ctx.strokeStyle = '#c0392b'; ctx.lineWidth = 1.5; ctx.setLineDash([6, 4]);
     ctx.beginPath(); ctx.moveTo(0, py(lam)); ctx.lineTo(W, py(lam)); ctx.stroke();
     ctx.setLineDash([]);
-    // minimizer marker
     ctx.fillStyle = '#27ae60';
     ctx.beginPath(); ctx.arc(px(xstar), py(fstar), 4, 0, 2 * Math.PI); ctx.fill();
-    // labels
     ctx.fillStyle = '#333'; ctx.font = '13px sans-serif';
     ctx.fillText('K = [-1, 1]', px(-0.15), 16);
     ctx.fillText('f(x)', px(1.12), py(f(1.12)) - 8);

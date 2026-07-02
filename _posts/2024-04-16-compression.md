@@ -73,7 +73,6 @@ A small MLP (1-24-24-1) is trained in your browser to fit a 1D function (gray cu
   var W = canvas.width, H = canvas.height;
   var h = 24;
   var target = function (x) { return Math.sin(3 * x) + 0.5 * Math.cos(7 * x) * x; };
-  // parameters
   var W1 = [], b1 = [], W2 = [], b2 = [], W3 = [], b3 = 0;
   function init() {
     W1 = []; b1 = []; W2 = []; b2 = []; W3 = [];
@@ -89,7 +88,6 @@ A small MLP (1-24-24-1) is trained in your browser to fit a 1D function (gray cu
     b3 = 0;
   }
   function forward(x, m) {
-    // m: optional mask thresholds {t: threshold}
     var t = m || 0;
     var a1 = [], a2 = [];
     for (var i = 0; i < h; i++) {
@@ -120,7 +118,6 @@ A small MLP (1-24-24-1) is trained in your browser to fit a 1D function (gray cu
     for (var n = 0; n < data.length; n++) {
       var x = data[n][0], y = data[n][1];
       var f = forward(x), err = f.y - y;
-      // output layer grads
       var gW3 = [], ga2 = [];
       for (var i = 0; i < h; i++) { gW3.push(err * f.a2[i]); ga2.push(err * W3[i]); }
       var ga1 = [];
