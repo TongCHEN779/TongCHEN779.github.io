@@ -36,6 +36,7 @@ Drag the slider to move the level $\lambda$. As long as $f (x) - \lambda \ge 0$ 
 
 <script>
 (function () {
+  try {
   var canvas = document.getElementById('sosdemo-canvas');
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
@@ -118,6 +119,16 @@ Drag the slider to move the level $\lambda$. As long as $f (x) - \lambda \ge 0$ 
     requestAnimationFrame(step);
   });
   draw(0);
+  } catch (err) {
+    var box = document.getElementById('sosdemo-box');
+    if (box) {
+      var msg = document.createElement('div');
+      msg.style.color = '#c0392b';
+      msg.style.marginTop = '6px';
+      msg.textContent = 'Demo failed to start: ' + err.message;
+      box.appendChild(msg);
+    }
+  }
 })();
 </script>
 

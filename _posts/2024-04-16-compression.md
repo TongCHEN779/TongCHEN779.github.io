@@ -66,6 +66,7 @@ A small MLP (1-24-24-1) is trained in your browser to fit a 1D function (gray cu
 
 <script>
 (function () {
+  try {
   var canvas = document.getElementById('prdemo-canvas');
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
@@ -189,6 +190,16 @@ A small MLP (1-24-24-1) is trained in your browser to fit a 1D function (gray cu
     else document.getElementById('prdemo-info').textContent += ' (training done)';
   }
   requestAnimationFrame(trainLoop);
+  } catch (err) {
+    var box = document.getElementById('prdemo-box');
+    if (box) {
+      var msg = document.createElement('div');
+      msg.style.color = '#c0392b';
+      msg.style.marginTop = '6px';
+      msg.textContent = 'Demo failed to start: ' + err.message;
+      box.appendChild(msg);
+    }
+  }
 })();
 </script>
 
