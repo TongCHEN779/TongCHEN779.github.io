@@ -22,105 +22,124 @@ where $\mathbf{K} = \lbrace\mathbf{x}: g_i (\mathbf{x}) \ge 0, \; i = 1, \ldots,
 
 ### Interactive illustration: the dual view
 
-Drag the slider to move the level $\lambda$. As long as $f (x) - \lambda \ge 0$ on $\mathbf{K} = [-1, 1]$ (curve entirely above the dashed line), $\lambda$ is a valid lower bound; the optimal value of the dual problem is reached when the line touches the curve.
+Pick a polynomial $f$ and a feasible set $\mathbf{K} = [a, b]$, then drag the level $\lambda$. As long as $f (x) - \lambda \ge 0$ on $\mathbf{K}$ (the curve stays above the dashed line), $\lambda$ is a valid lower bound; the optimal value of the dual problem is reached when the line touches the curve. The red shading marks where the certificate fails. Note how the answer can change completely when $\mathbf{K}$ cuts off the global minimizer: this is precisely the role of the constraint multipliers $\sigma_i g_i$ in the SOS certificate below.
 
-<div id="sosdemo-box" style="max-width:640px;margin:1em auto;padding:12px;border:1px solid #ccc;border-radius:8px;font-family:sans-serif;">
-  <canvas id="sosdemo-canvas" width="600" height="320" style="width:100%;"></canvas>
-  <div style="margin-top:8px;">
-    <label for="sosdemo-lambda">lambda = <span id="sosdemo-lval">0.00</span></label>
-    <input type="range" id="sosdemo-lambda" min="-100" max="60" value="0" style="width:100%;">
+<div class="demo" id="sosdemo-box">
+  <canvas id="sosdemo-canvas" width="640" height="320"></canvas>
+  <div class="demo-row">
+    <label for="sosdemo-f">f(x) =</label>
+    <select id="sosdemo-f">
+      <option value="0">x^4 - x^2 + 0.2x + 0.3 (double well)</option>
+      <option value="1">x^3 - x (cubic)</option>
+      <option value="2">x^6 - 2x^4 + x^2 + 0.1 (flat wells)</option>
+      <option value="3">sin(3x) + 0.5x (non-polynomial, for contrast)</option>
+    </select>
   </div>
-  <div id="sosdemo-status" style="margin-top:6px;font-weight:bold;"></div>
-  <button id="sosdemo-solve" style="margin-top:6px;padding:4px 12px;">Animate to optimum</button>
+  <div class="demo-row">
+    <label for="sosdemo-a">a = <span id="sosdemo-aval">-1.00</span></label>
+    <input type="range" id="sosdemo-a" min="-130" max="130" value="-100">
+    <label for="sosdemo-b">b = <span id="sosdemo-bval">1.00</span></label>
+    <input type="range" id="sosdemo-b" min="-130" max="130" value="100">
+  </div>
+  <div class="demo-row">
+    <label for="sosdemo-lambda">lambda = <span id="sosdemo-lval">0.00</span></label>
+    <input type="range" id="sosdemo-lambda" min="-200" max="100" value="0">
+    <button id="sosdemo-solve">Animate to optimum</button>
+  </div>
+  <div class="demo-status" id="sosdemo-status"></div>
 </div>
 
 <script>
 (function () {
   try {
-  var canvas = document.getElementById('sosdemo-canvas');
-  if (!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var slider = document.getElementById('sosdemo-lambda');
-  var lval = document.getElementById('sosdemo-lval');
+  var D = Demo, c = D.setup(document.getElementById('sosdemo-canvas')), ctx = c.ctx, W = c.W, H = c.H;
+  var fs = [
+    function (x) { return Math.pow(x, 4) - x * x + 0.2 * x + 0.3; },
+    function (x) { return x * x * x - x; },
+    function (x) { return Math.pow(x, 6) - 2 * Math.pow(x, 4) + x * x + 0.1; },
+    function (x) { return Math.sin(3 * x) + 0.5 * x; }
+  ];
+  var xmin = -1.5, xmax = 1.5, ymin = -1.4, ymax = 1.6;
+  var sel = document.getElementById('sosdemo-f');
+  var sa = document.getElementById('sosdemo-a'), sb = document.getElementById('sosdemo-b');
+  var sl = document.getElementById('sosdemo-lambda');
   var status = document.getElementById('sosdemo-status');
-  var W = canvas.width, H = canvas.height;
-  var xmin = -1.35, xmax = 1.35, ymin = -0.75, ymax = 1.1;
-  function f(x) { return Math.pow(x, 4) - x * x + 0.2 * x + 0.3; }
-  var fstar = Infinity, xstar = 0;
-  for (var i = 0; i <= 2000; i++) {
-    var x = -1 + 2 * i / 2000, v = f(x);
-    if (v < fstar) { fstar = v; xstar = x; }
-  }
+  var fstar = 0, xstar = 0, anim = null;
+  function f(x) { return fs[parseInt(sel.value, 10)](x); }
   function px(x) { return (x - xmin) / (xmax - xmin) * W; }
   function py(y) { return H - (y - ymin) / (ymax - ymin) * H; }
-  function draw(lam) {
+  function interval() {
+    var a = parseFloat(sa.value) / 100, b = parseFloat(sb.value) / 100;
+    return [Math.min(a, b), Math.max(a, b)];
+  }
+  function solve() {
+    var iv = interval();
+    fstar = Infinity;
+    for (var i = 0; i <= 3000; i++) {
+      var x = iv[0] + (iv[1] - iv[0]) * i / 3000, v = f(x);
+      if (v < fstar) { fstar = v; xstar = x; }
+    }
+  }
+  function draw() {
+    var iv = interval(), lam = parseFloat(sl.value) / 100;
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = 'rgba(120,180,255,0.15)';
-    ctx.fillRect(px(-1), 0, px(1) - px(-1), H);
+    ctx.fillRect(px(iv[0]), 0, px(iv[1]) - px(iv[0]), H);
     ctx.strokeStyle = '#999'; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(0, py(0)); ctx.lineTo(W, py(0)); ctx.stroke();
     ctx.beginPath(); ctx.moveTo(px(0), 0); ctx.lineTo(px(0), H); ctx.stroke();
-    ctx.fillStyle = 'rgba(255,80,80,0.25)';
-    for (var i = 0; i <= 600; i++) {
-      var x = -1 + 2 * i / 600;
-      if (f(x) < lam) {
-        var xp = px(x);
-        ctx.fillRect(xp - 1, py(lam), 2, py(f(x)) - py(lam));
-      }
+    ctx.fillStyle = 'rgba(255,80,80,0.28)';
+    for (var i = 0; i <= 640; i++) {
+      var x = iv[0] + (iv[1] - iv[0]) * i / 640, fx = f(x);
+      if (fx < lam) ctx.fillRect(px(x) - 0.5, py(lam), 1.5, py(fx) - py(lam));
     }
-    ctx.strokeStyle = '#1f4e9c'; ctx.lineWidth = 2;
+    ctx.strokeStyle = D.C.blue; ctx.lineWidth = 2;
     ctx.beginPath();
-    for (var j = 0; j <= 600; j++) {
-      var xx = xmin + (xmax - xmin) * j / 600;
-      var yy = f(xx);
+    for (var j = 0; j <= 640; j++) {
+      var xx = xmin + (xmax - xmin) * j / 640, yy = f(xx);
       if (j === 0) ctx.moveTo(px(xx), py(yy)); else ctx.lineTo(px(xx), py(yy));
     }
     ctx.stroke();
-    ctx.strokeStyle = '#c0392b'; ctx.lineWidth = 1.5; ctx.setLineDash([6, 4]);
+    ctx.strokeStyle = D.C.red; ctx.lineWidth = 1.5; ctx.setLineDash([6, 4]);
     ctx.beginPath(); ctx.moveTo(0, py(lam)); ctx.lineTo(W, py(lam)); ctx.stroke();
     ctx.setLineDash([]);
-    ctx.fillStyle = '#27ae60';
-    ctx.beginPath(); ctx.arc(px(xstar), py(fstar), 4, 0, 2 * Math.PI); ctx.fill();
-    ctx.fillStyle = '#333'; ctx.font = '13px sans-serif';
-    ctx.fillText('K = [-1, 1]', px(-0.15), 16);
-    ctx.fillText('f(x)', px(1.12), py(f(1.12)) - 8);
-    var feasible = lam <= fstar + 1e-9;
-    status.textContent = feasible
-      ? (Math.abs(lam - fstar) < 0.01
-        ? 'Optimal! lambda = f* = ' + fstar.toFixed(3)
-        : 'Valid lower bound: f - lambda is nonnegative on K (gap = ' + (fstar - lam).toFixed(3) + ')')
+    ctx.fillStyle = D.C.green;
+    ctx.beginPath(); ctx.arc(px(xstar), py(fstar), 5, 0, 2 * Math.PI); ctx.fill();
+    ctx.fillStyle = D.C.text; ctx.font = '13px sans-serif';
+    ctx.fillText('K = [' + iv[0].toFixed(2) + ', ' + iv[1].toFixed(2) + ']', px(iv[0]) + 4, 16);
+    ctx.fillText('minimizer x* = ' + xstar.toFixed(2), px(xstar) - 40, py(fstar) + 20);
+    document.getElementById('sosdemo-lval').textContent = lam.toFixed(2);
+    var ok = lam <= fstar + 1e-9;
+    status.className = 'demo-status ' + (ok ? 'demo-ok' : 'demo-bad');
+    status.textContent = ok
+      ? (Math.abs(lam - fstar) < 0.011
+        ? 'Optimal: lambda = f* = ' + fstar.toFixed(3)
+        : 'Valid lower bound: f - lambda >= 0 on K (gap = ' + (fstar - lam).toFixed(3) + ')')
       : 'Infeasible: f(x) - lambda < 0 somewhere on K (red region)';
-    status.style.color = feasible ? '#27ae60' : '#c0392b';
   }
-  function lamFromSlider() { return parseFloat(slider.value) / 100; }
-  slider.addEventListener('input', function () {
-    var lam = lamFromSlider();
-    lval.textContent = lam.toFixed(2);
-    draw(lam);
-  });
+  function refresh() {
+    document.getElementById('sosdemo-aval').textContent = interval()[0].toFixed(2);
+    document.getElementById('sosdemo-bval').textContent = interval()[1].toFixed(2);
+    solve(); draw();
+  }
+  sel.addEventListener('change', refresh);
+  sa.addEventListener('input', refresh);
+  sb.addEventListener('input', refresh);
+  sl.addEventListener('input', draw);
   document.getElementById('sosdemo-solve').addEventListener('click', function () {
-    var lam = lamFromSlider();
+    if (anim) cancelAnimationFrame(anim);
+    var lam = parseFloat(sl.value) / 100;
     var step = function () {
-      lam += (fstar - lam) * 0.12;
+      lam += (fstar - lam) * 0.1;
       if (Math.abs(lam - fstar) < 0.002) lam = fstar;
-      slider.value = Math.round(lam * 100);
-      lval.textContent = lam.toFixed(2);
-      draw(lam);
-      if (lam !== fstar) requestAnimationFrame(step);
+      sl.value = Math.floor(lam * 100 + 1e-9);
+      draw();
+      if (lam !== fstar) anim = requestAnimationFrame(step);
     };
-    requestAnimationFrame(step);
+    anim = requestAnimationFrame(step);
   });
-  draw(0);
-  } catch (err) {
-    var box = document.getElementById('sosdemo-box');
-    if (box) {
-      var msg = document.createElement('div');
-      msg.style.color = '#c0392b';
-      msg.style.marginTop = '6px';
-      msg.textContent = 'Demo failed to start: ' + err.message;
-      box.appendChild(msg);
-    }
-  }
+  refresh();
+  } catch (err) { Demo.fail('sosdemo-box', err); }
 })();
 </script>
 
@@ -156,7 +175,7 @@ The lifting technique for the primal form of POP can be similarly derived from t
 
 $$f - \lambda = \sigma_0 + \sum_{i = 1}^p \sigma_i g_i,$$
 
-where $\sigma_0$ is an SOS polynomial of degree $2d$, and $\sigma_i$ are SOS polynomials of degree $2 (d - \omega_i)$. The existence and convergence guarantee of the above SOS decomposition is given by Putinar's Positivstellensatz. If one is not concerned about the theoretical guarantee, we can freely generate the SOS certificates we need. For instance,
+where $\sigma_0$ is an SOS polynomial of degree $2d$, and $\sigma_i$ are SOS polynomials of degree $2 (d - \omega_i)$. The set of polynomials admitting such a representation is the degree-$d$ truncated quadratic module, denoted $Q_d (\mathbf{K})$ in the sections below. The existence and convergence guarantee of the above SOS decomposition is given by Putinar's Positivstellensatz. If one is not concerned about the theoretical guarantee, we can freely generate the SOS certificates we need. For instance,
 
 $$f - \lambda = \bigg(1 + \sum_i x_i\bigg)^{2d} + \sum_{i = 1}^p (1+x_i)^{2 (d - \omega_i)} g_i,$$
 
@@ -165,6 +184,15 @@ or
 $$f - \lambda = \bigg(1 + \sum_i x_i\bigg)^{2} \sigma_0 + \sum_{i = 1}^p (1+x_i)^{2} \sigma_i g_i,$$
 
 also give a lower bound. For more systematic and constructive ways of building convergent SOS certificates, see [[Ahmadi et al. 2017](https://arxiv.org/abs/1709.09307)].
+
+### The Lasserre hierarchy
+Increasing $d$ gives a hierarchy of SDPs. Let $\lambda_d$ denote the optimal value of the SOS relaxation of order $d$ (equivalently, of the moment relaxation of order $d$, by SDP duality). Then
+
+$$\lambda_1 \le \lambda_2 \le \cdots \le f^* := \min_{\mathbf{x} \in \mathbf{K}} f (\mathbf{x}),$$
+
+and $\lambda_d \to f^*$ as $d \to \infty$ under Putinar's assumption (the quadratic module is Archimedean, e.g., $\mathbf{K}$ is compact and one of the $g_i$ is $R - \Vert \mathbf{x} \Vert^2$). In practice, convergence is often finite: the relaxation is exact at a small $d$, and exactness can be certified by a rank condition on the moment matrix (flat extension), which also extracts the global minimizers. The price is size: the moment matrix $\mathbf{M}_d (\mathbf{y})$ has dimension $\binom{n + d}{d}$, which is why exploiting sparsity and symmetry is essential for any practical use.
+
+Not every nonnegative polynomial is SOS: the Motzkin polynomial $x^4 y^2 + x^2 y^4 - 3 x^2 y^2 + 1 \ge 0$ is the classical counterexample. This gap between nonnegativity and SOS is exactly what the hierarchy above bridges when constraints are present, and the reason the lower bounds $\lambda_d$ can be strictly below $f^*$ at low order.
 
 Non-convex Set Approximation
 ---
